@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo" >
+
+    <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.deportiva.enlaces.Enlaces"
+         >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:gravity="center"  >
+
+            <ImageButton
+                android:id="@+id/bt_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/desc_boton"
+                android:src="@drawable/iconofacebook" />
+
+            <ImageButton
+                android:id="@+id/bt_pagina_oficial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="44dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/desc_boton"
+                android:src="@drawable/logo" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:gravity="center"  >
+
+            <ImageButton
+                android:id="@+id/bt_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/desc_boton"
+                android:src="@drawable/iconotwitter" />
+
+            <ImageButton
+                android:id="@+id/bt_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/desc_boton"
+                android:src="@drawable/iconoinstagram" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/bt_ponfetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/desc_boton"
+                android:src="@drawable/ponfetv"
+                 />
+
+        </TableRow>
+    </TableLayout>
+</ScrollView>

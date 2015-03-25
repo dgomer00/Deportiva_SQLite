@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.deportiva.plantilla.Gaztanaga" >
+
+    <item
+        android:id="@+id/acercaDe"
+        android:orderInCategory="100"
+        android:title="@string/acercaDe"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+    <string name="app_name">Deportiva</string>
+    <string name="action_settings">Settings</string>
+    <string name="icono_linea">Icono de cada linea</string>
+    <string name="portero">Porteros</string>
+    <string name="defensa">Defensas</string>
+    <string name="centro">Centrocampistas</string>
+    <string name="delantero">Delanteros</string>
+    <string name="nombredeportivo">Nombre deportivo:</string>
+    <string name="nombre">Nombre completo:</string>
+    <string name="posicion">Posición:</string>
+    <string name="nacimiento">Fecha nacimiento:</string>
+    <string name="nacido">Nació en:</string>
+    <string name="peso">Peso:</string>
+    <string name="estatura">Estatura:</string>
+    <string name="procedencia">Procedencia:</string>
+    <string name="dorsal">Dorsal:</string>
+    <string name="title_activity_dinu">Dinu Moldovan</string>
+    <string name="nombre_depor_dinu">Dinu</string>
+    <string name="nombre_dinu">Dinu Moldovan Bogdam</string>
+    <string name="posicion_portero">Portero</string>
+    <string name="nacimiento_dinu">03/05/1990</string>
+    <string name="pais_dinu">Albalulia(Rumanía)</string>
+    <string name="peso_dinu">72</string>
+    <string name="estatura_dinu">1.83 m.</string>
+    <string name="proc_dinu">SD Ponferradina</string>
+    <string name="dorsal_dinu">25</string>
+    <string name="title_activity_prieto">Prieto</string>
+    <string name="nombre_depor_prieto">Prieto</string>
+    <string name="nombre_prieto">Francisco Javier Prieto Caroca</string>
+    <string name="nacimiento_prieto">01/07/1983</string>
+    <string name="pais_prieto">Antofagasta(Chile)</string>
+    <string name="peso_prieto">79</string>
+    <string name="estatura_prieto">1.88 m.</string>
+    <string name="proc_prieto">Mirandés</string>
+    <string name="dorsal_prieto">13</string>
+    <string name="title_activity_kepa">Kepa Arrizabalaga</string>
+    <string name="nombre_depor_kepa">Arrizabalaga</string>
+    <string name="nombre_kepa">Kepa Arrizabalaga Revuelta</string>
+    <string name="nacimiento_kepa">03/10/1994</string>
+    <string name="pais_kepa">Ondárroa(Vizcaya)</string>
+    <string name="peso_kepa">85</string>
+    <string name="estatura_kepa">1.89 m.</string>
+    <string name="proc_kepa">Athletic Club</string>
+    <string name="dorsal_kepa">1</string>
+    <string name="title_activity_carpio">Carpio</string>
+    <string name="nombre_depor_carpio">Carpio</string>
+    <string name="nombre_carpio">Javier Carpio Martín</string>
+    <string name="posicion_defensa">Defensa</string>
+    <string name="nacimiento_carpio">06/04/1984</string>
+    <string name="pais_carpio">Salamanca</string>
+    <string name="peso_carpio">72</string>
+    <string name="estatura_carpio">1.75 m.</string>
+    <string name="proc_carpio">SD Ponferradina</string>
+    <string name="dorsal_carpio">2</string>
+    <string name="title_activity_alan">Alan Baró</string>
+    <string name="nombre_depor_alan">Alan</string>
+    <string name="nombre_alan">Alan Baró Calabuig</string>
+    <string name="nacimiento_alan">22/06/1985</string>
+    <string name="pais_alan">Darnius(Girona)</string>
+    <string name="peso_alan">73</string>
+    <string name="estatura_alan">1.80 m.</string>
+    <string name="proc_alan">SD Ponferradina</string>
+    <string name="dorsal_alan">15</string>
+    <string name="title_activity_lucas">Lucas</string>
+    <string name="nombre_depor_lucas">Lucas</string>
+    <string name="nombre_lucas">Lucas Domínguez Irarrázabal</string>
+    <string name="nacimiento_lucas">27/10/1989</string>
+    <string name="pais_lucas">Pirque(Chile)</string>
+    <string name="peso_lucas">75</string>
+    <string name="estatura_lucas">1.86 m.</string>
+    <string name="proc_lucas">Colo-Colo</string>
+    <string name="dorsal_lucas">4</string>
+    <string name="title_activity_castaneda">Julen Castañeda</string>
+    <string name="nombre_depor_castaneda">J.Castañeda</string>
+    <string name="nombre_castaneda">Julen Castañeda Nuin</string>
+    <string name="nacimiento_castaneda">14/11/1990</string>
+    <string name="pais_castaneda">Tolosa</string>
+    <string name="peso_castaneda">75.5</string>
+    <string name="estatura_castaneda">1.79 m.</string>
+    <string name="proc_castaneda">SD Ponferradina</string>
+    <string name="dorsal_castaneda">3</string>
+    <string name="title_activity_camille">Camille</string>
+    <string name="nombre_depor_camille">Camille</string>
+    <string name="nombre_camille">Samuel Camille Geoffroy</string>
+    <string name="nacimiento_camille">02/02/1986</string>
+    <string name="pais_camille">Saint-Denis(Francia)</string>
+    <string name="peso_camille">69</string>
+    <string name="estatura_camille">1.76 m.</string>
+    <string name="proc_camille">A.D.Alcorcón</string>
+    <string name="dorsal_camille">24</string>
+    <string name="title_activity_oscar">Óscar Ramírez</string>
+    <string name="nombre_depor_oscar">O.Ramírez.J</string>
+    <string name="nombre_oscar">Óscar Ramírez Martín</string>
+    <string name="nacimiento_oscar">01/03/1984</string>
+    <string name="pais_oscar">Girona</string>
+    <string name="peso_oscar">77</string>
+    <string name="estatura_oscar">1.83 m.</string>
+    <string name="proc_oscar">SD Ponferradina</string>
+    <string name="dorsal_oscar">20</string>
+    <string name="title_activity_aguilar">Alberto Aguilar</string>
+    <string name="nombre_depor_aguilar">Alberto A.</string>
+    <string name="nombre_aguilar">Alberto Aguilar Leiva</string>
+    <string name="nacimiento_aguilar">12/07/1984</string>
+    <string name="pais_aguilar">Benamejí(Córdoba)</string>
+    <string name="peso_aguilar">80.5</string>
+    <string name="estatura_aguilar">1.84 m.</string>
+    <string name="proc_aguilar">SD Ponferradina</string>
+    <string name="dorsal_aguilar">22</string>
+    <string name="title_activity_jonathan">Jonathan Ruiz</string>
+    <string name="nombre_depor_jonathan">Jonathan</string>
+    <string name="nombre_jonathan">Jonathan Ruiz Llaga</string>
+    <string name="posicion_centro">Centrocampista</string>
+    <string name="nacimiento_jonathan">02/04/1982</string>
+    <string name="pais_jonathan">Écija(Sevilla)</string>
+    <string name="peso_jonathan">64</string>
+    <string name="estatura_jonathan">1.70 m.</string>
+    <string name="proc_jonathan">SD Ponferradina</string>
+    <string name="dorsal_jonathan">14</string>
+    <string name="title_activity_acoran">Acorán</string>
+    <string name="nombre_depor_acoran">Acorán</string>
+    <string name="nombre_acoran">Acorán Barrera Reyes</string>
+    <string name="nacimiento_acoran">31/01/1983</string>
+    <string name="pais_acoran">Tenerife</string>
+    <string name="peso_acoran">68</string>
+    <string name="estatura_acoran">1.73 m.</string>
+    <string name="proc_acoran">SD Ponferradina</string>
+    <string name="dorsal_acoran">16</string>
+    <string name="title_activity_rueda">Rueda</string>
+    <string name="nombre_depor_rueda">Rueda</string>
+    <string name="nombre_rueda">José Manuel Rueda Sampedro</string>
+    <string name="nacimiento_rueda">30/01/1988</string>
+    <string name="pais_rueda">Linares(Jaén)</string>
+    <string name="peso_rueda">72.5</string>
+    <string name="estatura_rueda">1.78 m.</string>
+    <string name="proc_rueda">SD Ponferradina</string>
+    <string name="dorsal_rueda">8</string>
+    <string name="title_activity_andy">Andy</string>
+    <string name="nombre_depor_andy">Andy</string>
+    <string name="nombre_andy">José Andrés Rodríguez Gaitán</string>
+    <string name="nacimiento_andy">30/01/1990</string>
+    <string name="pais_andy">Almuñecar(Granada)</string>
+    <string name="peso_andy">79</string>
+    <string name="estatura_andy">1.85 m.</string>
+    <string name="proc_andy">Levante B</string>
+    <string name="dorsal_andy">17</string>
+    <string name="title_activity_adan">Adán</string>
+    <string name="nombre_depor_adan">Adán</string>
+    <string name="nombre_adan">Adán Gurdiel Mella</string>
+    <string name="nacimiento_adan">14/12/1993</string>
+    <string name="pais_adan">Fabero(León)</string>
+    <string name="peso_adan">69</string>
+    <string name="estatura_adan">1.78 m.</string>
+    <string name="proc_adan">SD Ponferradina</string>
+    <string name="dorsal_adan">26</string>
+    <string name="title_activity_gaztanaga">Jon Gaztañaga</string>
+    <string name="nombre_depor_gaztanaga">Gaztañaga</string>
+    <string name="nombre_gaztanaga">Jon Gaztañaga Arrospide</string>
+    <string name="nacimiento_gaztanaga">26/06/1991</string>
+    <string name="pais_gaztanaga">Andoáin(Guipúzcoa)</string>
+    <string name="peso_gaztanaga">80</string>
+    <string name="estatura_gaztanaga">1.82 m.</string>
+    <string name="proc_gaztanaga">Real Sociedad</string>
+    <string name="dorsal_gaztanaga">6</string>
+    <string name="title_activity_tete">Tete</string>
+    <string name="nombre_depor_tete">Tete</string>
+    <string name="nombre_tete">Alberto Sansinena Chamorro</string>
+    <string name="nacimiento_tete">26/05/1985</string>
+    <string name="pais_tete">Badajoz</string>
+    <string name="peso_tete">59</string>
+    <string name="estatura_tete">1.66 m.</string>
+    <string name="proc_tete">Real Murcia</string>
+    <string name="dorsal_tete">19</string>
+    <string name="title_activity_melero">Gonzalo Melero</string>
+    <string name="nombre_depor_melero">Melero</string>
+    <string name="nombre_melero">Gonzalo Julián Melero Manzanares</string>
+    <string name="nacimiento_melero">02/01/1994</string>
+    <string name="pais_melero">Madrid</string>
+    <string name="peso_melero">77</string>
+    <string name="estatura_melero">1.83 m.</string>
+    <string name="proc_melero">Real Madrid Castilla</string>
+    <string name="dorsal_melero">23</string>
+    <string name="title_activity_sobrino">R.Sobrino</string>
+    <string name="nombre_depor_sobrino">R.Sobrino</string>
+    <string name="nombre_sobrino">Rubén Sobrino Pozuelo</string>
+    <string name="posicion_delantero">Delantero</string>
+    <string name="nacimiento_sobrino">01/06/1993</string>
+    <string name="pais_sobrino">Ciudad Real</string>
+    <string name="peso_sobrino">75</string>
+    <string name="estatura_sobrino">1.82 m.</string>
+    <string name="proc_sobrino">Real Madrid Castilla</string>
+    <string name="dorsal_sobrino">11</string>
+    <string name="title_activity_cristian">Cristian F.</string>
+    <string name="nombre_depor_cristian">Cristian F.</string>
+    <string name="nombre_cristian">Cristian Fernández Conchuela</string>
+    <string name="nacimiento_cristian">22/12/1988</string>
+    <string name="pais_cristian">Guadalajara</string>
+    <string name="peso_cristian">70</string>
+    <string name="estatura_cristian">1.78 m.</string>
+    <string name="proc_cristian">S.D.Ponferradina</string>
+    <string name="dorsal_cristian">7</string>
+    <string name="title_activity_berrocal">Berrocal</string>
+    <string name="nombre_depor_berrocal">Berrocal</string>
+    <string name="nombre_berrocal">Jesús Berrocal Campos</string>
+    <string name="nacimiento_berrocal">05/02/1988</string>
+    <string name="pais_berrocal">Córdoba</string>
+    <string name="peso_berrocal">77</string>
+    <string name="estatura_berrocal">1.83 m.</string>
+    <string name="proc_berrocal">S.D.Ponferradina</string>
+    <string name="dorsal_berrocal">9</string>
+    <string name="title_activity_infante">Pablo Infante</string>
+    <string name="nombre_depor_infante">Pablo</string>
+    <string name="nombre_infante">Pablo Infante Muñoz</string>
+    <string name="nacimiento_infante">20/03/1980</string>
+    <string name="pais_infante">Burgos</string>
+    <string name="peso_infante">70</string>
+    <string name="estatura_infante">1.75 m.</string>
+    <string name="proc_infante">Mirandés</string>
+    <string name="dorsal_infante">21</string>
+    <string name="title_activity_yuri">Yuri</string>
+    <string name="nombre_depor_yuri">Yuri</string>
+    <string name="nombre_yuri">Yuri De Souza Fonseca</string>
+    <string name="nacimiento_yuri">08/08/1982</string>
+    <string name="pais_yuri">Maceio(Brasil)</string>
+    <string name="peso_yuri">78</string>
+    <string name="estatura_yuri">1.86 m.</string>
+    <string name="proc_yuri">S.D.Ponferradina</string>
+    <string name="dorsal_yuri">10</string>
+    <string name="presidente">Presidente:</string>
+    <string name="presidente_nombre">Don José Fernández Nieto (12 temporadas en el cargo)</string>
+    <string name="vicepresidente">Vicepresidente:</string>
+    <string name="vicepresidente_nombre">D.Carlos Castañeiras Folgueral</string>
+    <string name="secretario">Secretario:</string>
+    <string name="secretario_nombre">D.Domingo Lago Díaz</string>
+    <string name="consejero_delegado">Consejero delegado:</string>
+    <string name="consejero_delegado_nombre">D.Eduardo Domínguez Garnelo y D.Juan Manceñido Prieto</string>
+    <string name="area_economica">Área económica:</string>
+    <string name="area_economica_nombre">D.Carlos Castañeiras,D.José Barba Pacios y D.José Barba Merayo</string>
+    <string name="area_social">Área social:</string>
+    <string name="area_social_nombre">D.Pedro Fernández Nieto y D.Juan Manciñedo Prieto</string>
+    <string name="area_deportiva">Área deportiva:</string>
+    <string name="area_deportiva_nombre">D.Antonio Blanco Ravena y D.Alfonso Rodríguez-Hevia González</string>
+    <string name="marketing_comunicacion">Marketing/Comunicación:</string>
+    <string name="marketing_comunicacion_nombre">D.Fernando Castañeiras Folgueral</string>
+    <string name="desc">Esto es una imagen</string>
+    <string name="desc_boton">Esto es una imagen en un boton</string>
+    <string name="seleccionada">Esta es la imagen seleccionada en la galeria</string>
+    <string name="title_activity_entradas">Precio Abonos-S.D.P.</string>
+    <string name="title_activity_directiva">Directiva-S.D.Ponferradina</string>
+    <string name="title_activity_cuerpo">Cuerpo Técnico-S.D.P.</string>
+    <string name="title_activity_enlaces">Enlaces de interés</string>
+    <string name="title_activity_canciones">Canciones-S.D.Ponferradina</string>
+    <string name="himno">1- Himno de la S.D.Ponferradina</string>
+    <string name="virgen">2- A Ponferrada me voy</string>
+    <string name="title_activity_himno">Himno</string>
+    <string name="title_activity_virgen_encina">Virgen de la Encina</string>
+    <string name="title_activity_galeria">Galeria de Imágenes-S.D.P.</string>
+    <string name="title_activity_historia">Historia-S.D.Ponferradina</string>
+    <string name="tab1">Pestaña 1</string>
+    <string name="tab2">Pestaña 2</string>
+    <string name="tab3">Pestaña 3</string>
+    <string name="tab4">Pestaña 4</string>
+    <string name="tab5">Pestaña 5</string>
+    <string name="title_activity_cuentas">Cuentas-S.D.Ponferradina</string>
+    <string name="ingresos">Ingresos</string>
+    <string name="gastos">Gastos</string>
+    <string name="title_activity_ingresos">Ingresos-S.D.Ponferradina</string>
+    <string name="title_activity_gastos">Gastos-S.D.Ponferradina</string>
+    <string name="cifra_de_negocios_">"TOTAL CIFRA DE NEGOCIOS :      "</string>
+    <string name="cifra_negocios">4.137.000€</string>
+    <string name="ingresos_por_retransmision">"Ingresos por retransmisión :   "</string>
+    <string name="cifra_retransmision">2.540.000€</string>
+    <string name="organigrama">Organigrama</string>
+    <string name="descargar_cuentas_sdp">Descargar cuentas SDP</string>
+    <string name="ingresos_por_abonados_y_socios">"Ingresos por abonados y socios :   "</string>
+    <string name="cifra_abonados_socios">848.000€</string>
+    <string name="ingresos_por_publicidad">"Ingresos por publicidad :   "</string>
+    <string name="cifra_publicidad">241.000€</string>
+    <string name="ingresos_de_competidores_oficiales">"Ingresos de \ncompetidores oficiales :   "</string>
+    <string name="cifra_competidores">\n190.000€</string>
+    <string name="ingresos_por_comercializacion">"Ingresos por comercialización :   "</string>
+    <string name="cifra_comercializacion">318.000€</string>
+    <string name="otros_ingresos_de_explotacion">"TOTAL OTROS INGRESOS\nDE EXPLOTACIÓN :   "</string>
+    <string name="cifra_explotacion">\n640.000€</string>
+    <string name="ingresos_lfp">"Ingresos LFP :   "</string>
+    <string name="cifra_lfp">441.000€</string>
+    <string name="otros">"Otros :   "</string>
+    <string name="cifra_otros">0€</string>
+    <string name="subvenciones">"Subvenciones :   "</string>
+    <string name="cifra_subvenciones">199.000€</string>
+    <string name="total_ingresos">"TOTAL :   "</string>
+    <string name="cifra_total_ingresos">4.777.000€</string>
+    <string name="aprovisionamientos">TOTAL APROVISIONAMIENTOS :   </string>
+    <string name="cifra_aprovisionamientos">207.000€</string>
+    <string name="consu_material_deportivo">Consumo material deportivo :   </string>
+    <string name="cifra_material_deportivo">93.000€</string>
+    <string name="otros_consumos">Otros consumos \ny gastos externos :   </string>
+    <string name="cifra_otros_consumos">\n114.000€</string>
+    <string name="gastos_personal">TOTAL GASTOS PERSONAL :   </string>
+    <string name="cifra_gastos_personal">3.047.000€</string>
+    <string name="sueldos_y_salarios">Sueldos y salarios plantilla SDP :   </string>
+    <string name="cifra_sueldos_y_salarios">2.378.000€</string>
+    <string name="otros_sueldos">Otros sueldos salarios \ny asimilados :   </string>
+    <string name="cifra_otros_sueldos">\n289.000€</string>
+    <string name="cargas_sociales">Cargas sociales :   </string>
+    <string name="cifra_cargas_sociales">380.000€</string>
+    <string name="dotacion_inmovilizado">TOTAL DOTACIÓN AMORTIZACIÓN \nINMOVILIZADO :   </string>
+    <string name="cifra_dotacion">\n35.000€</string>
+    <string name="amortizacion_inmovilizado">Amortización inmovilizado y\nmaterial :   </string>
+    <string name="cifra_amortizacion">\n35.000€</string>
+    <string name="otros_gastos_explotacion">TOTAL OTROS GASTOS\n DE EXPLOTACIÓN :   </string>
+    <string name="cifra_otros_gastos_explotacion">\n1.334.000€</string>
+    <string name="servicios_exteriores">Servicios exteriores :   </string>
+    <string name="cifra_servicios_exteriores">1.064.000€</string>
+    <string name="tributos">Tributos :   </string>
+    <string name="cifra_tributos">3.000€</string>
+    <string name="desplazamientos">Desplazamientos :   </string>
+    <string name="cifra_desplazamientos">242.000€</string>
+    <string name="otros_gastos_gestion_corriente">Otros gastos de gestión corriente :   </string>
+    <string name="cifra_gastos_gestion_corriente">25.000€</string>
+    <string name="gastos_financieros">TOTAL GASTOS FINANCIEROS\n Y ASIMILADOS :   </string>
+    <string name="cifra_gastos_financieros">\n23.000€</string>
+    <string name="por_deudas_con_terceros">Por deudas con terceros\n y gastos asimilados :   </string>
+    <string name="cifra_deudas_con_terceros">\n23.000€</string>
+    <string name="total_gastos">TOTAL :   </string>
+    <string name="cifra_total_gastos">4.646.000€</string>
+    <string name="resultado_superavit">RESULTADO/SUPERÁVIT :   </string>
+    <string name="cifra_resultado_superavit">131.000€</string>
+    <string name="title_activity_marcador">Resultados-Liga Adelante</string>
+    <string name="title_activity_clasificacion">Clasificación-Liga Adelante</string>
+    <string name="title_activity_intro_calendario">Calendario-Liga Adelante</string>
+    <string name="lfp">LFP</string>
+    <string name="marca">Marca</string>
+    <string name="mundo_deportivo">Mundo Deportivo</string>
+    <string name="el_pais">El País</string>
+    <string name="calendario_oficial">Calendario oficial :  </string>
+    <string name="diario_marca">Calendario, resultados y clasificación del diario Marca :  </string>
+    <string name="diario_mundo_deportivo">Calendario Liga Adelante del Mundo Deportivo :  </string>
+    <string name="diario_el_pais">Calendario Liga Adelante de el diario El País :  </string>
+    <string name="title_activity_estadio">El Toralín</string>
+    <string name="anio1">1922 a 1923:</string>
+    <string name="anio2">1923 a 1926:</string>
+    <string name="anio3">1926 a 1927:</string>
+    <string name="anio4">1927 a 1928:</string>
+    <string name="anio5">1928 a 1931:</string>
+    <string name="anio6">1931 a 1935:</string>
+    <string name="anio7">1935 a 1936:</string>
+    <string name="anio8">1936 a 1946:</string>
+    <string name="anio9">1946 a 1947:</string>
+    <string name="anio10">1947 a 1949:</string>
+    <string name="anio11">1949 a 1961:</string>
+    <string name="anio12">1961 a 1964:</string>
+    <string name="anio13">1964:</string>
+    <string name="anio14">1964 a 1966:</string>
+    <string name="anio15">1966 a 1972:</string>
+    <string name="anio16">1972 a 1973:</string>
+    <string name="anio17">1973 a 1974:</string>
+    <string name="anio18">1974 a 1978:</string>
+    <string name="anio19">1978 a 1982:</string>
+    <string name="anio20">1982 a 1986:</string>
+    <string name="anio21">1986 a 1994:</string>
+    <string name="anio22">1994 a 1996:</string>
+    <string name="anio23">1996 a 1997:</string>
+    <string name="anio24">1997 a 1999:</string>
+    <string name="anio25">1999 en adelante:</string>
+    <string name="rogelio">Rogelio López Boto</string>
+    <string name="fernando">Fernando Miranda Hurtado</string>
+    <string name="jose_maria">José María Álvarez</string>
+    <string name="pedro">Pedro Barrios Camaño</string>
+    <string name="jose_domingo">José Domingo Vázquez</string>
+    <string name="segundo">Segundo Trincado Fernández</string>
+    <string name="gustavo">Gustavo Bodelón Nieto</string>
+    <string name="mariano">Mariano Arias Juárez</string>
+    <string name="antonio">Antonio Fernández Fernández(Gringo)</string>
+    <string name="feliciano">Feliciano González Azgárate</string>
+    <string name="emilio">Emilio Tahoces Pérez</string>
+    <string name="manuel">Manuel García Granero</string>
+    <string name="antonio_domingo">Antonio Domingo Laredo</string>
+    <string name="jose_maria_agudo_gestora">José María Agudo Yañez(gestora)</string>
+    <string name="jose_maria_agudo">José María Agudo Yañez</string>
+    <string name="porfirio">Porfirio Fernández Rodríguez</string>
+    <string name="delfrido">Delfrido Pérez Vales</string>
+    <string name="martin">Martín Pérez Fernández (Gestora)</string>
+    <string name="lisardo">Lisardo González Rodríguez(Gestora)</string>
+    <string name="jose">José Fernández Nieto</string>
+    <string name="palmares">Palmarés</string>
+    <string name="torneos_nacionales">Torneos Nacionales:</string>
+    <string name="torneos_regionales">Torneos Regionales:</string>
+    <string name="otros_hitos">Otros logros:</string>
+    <string name="segundab">*Segunda División B de España(3): 2004/2005,2007/2008,2009/2010</string>
+    <string name="tercera">*Tercera División de España(3): 1957/1958,1965/1966,1986/1987</string>
+    <string name="copa_castilla">*Copa de Castilla y León de fútbol(1):2010/2011</string>
+    <string name="copa_rey">En la Copa del Rey de la temporada 2011/2012, la Ponferradina llega a dieciseisavos de final, enfrentándose al Real Madrid, que la elimina al ganar 0-2 en el Toralín y 5-1 en el Bernabéu</string>
+    <string name="a_ponferrada_me_voy">A Ponferrada me voy\n
+a caballo en mi borrica,\n
+y a la Virgen de la Encina\n
+le cantaré una coplica,\n
+y a la Virgen de la Encina\n
+le cantaré una coplica.\n
+\n
+Y después de haber cantado\n
+a la Patrona del Bierzo,\n
+le voy a pedir que llueva,\n
+que se secan los pimientos,\n
+le voy a pedir que llueva,\n
+que se secan los pimientos.\n
+\n
+Si se secan los pimientos,\n
+pide a la Virgen que llueva,\n
+que se está secando toda,\n
+toda, toda la Ribera, \n
+que se está secando toda,\n
+toda, toda la Ribera.\n 
+\n
+Si se seca la Ribera\n
+y se secaran los trigos,\n
+anda y rézale a la Virgen\n
+que no se seque el buen vino,\n 
+anda y rézale a la Virgen\n
+que no se seque el buen vino.\n 
+\n
+La virgen de la Encina\n
+¿quién la sacará?\n
+¿quién la sacará?\n
+¿quién la sacará?\n
+Los cuatro pimenteros\n
+de Ponferrada, de Ponferrada,\n
+de Ponferrada.\n
+\n
+La virgen de la Encina\n
+¿quién la sacará?\n
+¿quién la sacará?\n
+¿quién la sacará?\n
+Los cuatro pimenteros\n
+de Ponferrada, de Ponferrada,\n
+de Ponferrada.\n
+\n
+La virgen de la Encina\n
+¿quién la sacará?\n
+¿quién la sacará?\n
+¿quién la sacará?\n
+Los cuatro pimenteros\n
+de Ponferrada, de Ponferrada,\n
+de Ponferrada.\n</string>
+    <string name="letra_himno">Tu pasado, Deportiva triunfante\n
+de combates y trofeos sin fin,\n
+ya te invita a seguir siempre adelante:\n
+¡Siempre adelante, gloria ATLÉTICA del Sil!\n
+\n
+Ponferrada en Ti tiene, de sus glorias,\n
+el más alto y magnífico blasón,\n
+que del Bierzo ilumina las memorias:\n
+la Ponferradina nos enciende el corazón.\n
+\n
+Estribillo:\n\n
+Triunfal Deportiva\n
+adelante y arriba:\n
+Deportiva, a vencer en toda noble competición.\n
+¡Hurra, Deportiva,\n
+tus fuerzas avivan;\n
+Luchad, blanquiazules, por honrar nuestra Región!\n
+\n
+Deportiva: Amor y luz del Bierzo,\n
+Honra de la Bandera Blanquiazul:\n
+¡Al ascenso, con alma y con esfuerzo!\n
+¡Siempre adelante, Deportiva Juventud!\n
+\n
+Estribillo:\n\n
+Triunfal Deportiva\n
+adelante y arriba:\n
+Deportiva, a vencer en toda noble competición.\n
+¡Hurra, Deportiva,\n
+tus fuerzas avivan;\n
+Luchad, blanquiazules, por honrar nuestra Región!\n
+\n
+Estribillo:\n\n
+Triunfal Deportiva\n
+adelante y arriba:\n
+Deportiva, a vencer en toda noble competición.\n
+¡Hurra, Deportiva, tus fuerzas avivan;\n
+Luchad, blanquiazules, por honrar nuestra región!\n
+¡Luchad, blanquiazules, por honrar nuestra región!\n
+¡Luchad, blanquiazules, por honrar nuestra región!\n
+¡Deportiva, … , Deportiva, … ,Deportiva, … ,Deportiva, … !\n</string>
+    <string name="descarga_historia">Descargar Historia</string>
+    <string name="titulo_fundacion">Fundación de la Ponferradina</string>
+    <string name="texto_fundacion">El 7 de junio de 1922 se reúnen en Ponferrada, en lo que bien podría considerarse una asamblea general, una serie de personas dispuestas a crear un equipo de fútbol. Tras elegir la junta directiva, en el punto quinto del orden del día se debate el nombre de la nueva entidad acordándose el de Sociedad Deportiva Ponferradina. Igualmente también queda determinado el uniforme, compuesto por pantalón azul y jersey a franjas azules y blancas con un escudo en rojo donde figure las letras S.D.P. y el castillo de la ciudad.</string>
+    <string name="texto_1926">En 1926 entra en la Federación Castellano Leonesa con sede en Valladolid dentro de la Segunda categoría.</string>
+    <string name="texto_1935">En 1935 se proclama campeón Regional y en el siguiente año subcampeón.</string>
+    <string name="texto_1943">En 1943 inicia su andadura en la Tercera División.</string>
+    <string name="texto_1957">El primer título nacional lo alcanzaba en la campaña 1957-1958 al clasificarse campeón de su Grupo de Tercera División.</string>
+    <string name="titulo_1970">Años 70</string>
+    <string name="texto_1970">La Ponferradina entra en una fase de penurias económicas y deportivas que llevan al descenso al final de la campaña 1973-1974 y a la venta del campo de Santa Marta, propiedad del Club, celebrándose el último partido en dicho terreno el 16 de marzo de 1975 pasando a jugar en Fuentesnuevas.</string>
+    <string name="texto_1975">En año 75 Vuelven a Tercera habiendo perdido solo cinco encuentros de los treinta y ocho jugados.</string>
+    <string name="titulo_1980">Años 80</string>
+    <string name="texto_1980">En la primera temporada de la década de los ochenta la Deportiva llega a la tercera ronda de la Copa enfrentándose al Sporting de Gijón y terminando segunda en la tabla clasificatoria lo que supone volver a jugar el ascenso.</string>
+    <string name="texto_1986">En la temporada 1986-1987 la Ponferradina consigue el ascenso directo a Segunda B, se muestra intratable y solo pierde tres de los cuarenta encuentros disputados, lo que supone la primera posición y el ascenso directo que se otorga a los 3 primeros.</string>
+    <string name="Titulo_1990">Años 90</string>
+    <string name="texto_1990">En la 1990-1991 llega a la cuarta ronda de la Copa del Rey correspondiendo eliminarse con el Zaragoza que gana en campo ponferradino por 2-1, pero no pasa del empate en La Romareda.</string>
+    <string name="texto_1992">En la campaña 1992-1993 dado que en la tercera eliminatoria le Temporada 2008/2009corresponde el Sevilla donde juega Maradona. Como es lógico los andaluces eliminan a los bercianos.</string>
+    <string name="texto_1993">En la temporada 1993-1994  Un descenso que trae también una caótica situación económica del Club. Un nuevo grupo gestor, encabezado por Martín Pérez, toma las riendas en una lucha contra el calendario para recaudar con urgencia quince millones. La movilización es total tratando de sensibilizar a la ciudad de la inminente desaparición de la entidad. Al final se produce el milagro, la Deportiva liquida sus deudas y comienza una nueva andadura por Tercera.</string>
+    <string name="texto_1998">En la campaña 1998-1999 juega la fase de ascenso, donde no pierde ningún partido, retornado a Segunda B.</string>
+    <string name="texto_1999">La primera campaña (1999-2000) de su regreso a la categoría no es buena y se salva del descenso en la última jornada. Para entonces se ha realizado un relevo en la dirección del Club pasando a regir sus destinos José Fernández Nieto.</string>
+    <string name="grafico_temporadas">Gráfico con los puestos y temporadas.</string>
+    <string name="titulo_2000">Años 2000-actualidad</string>
+    <string name="texto_2003">En la 2003-2004 Miguel A. Alvarez Tomé releva a Simón Pérez en el banquillo y consigue clasificar al equipo en una meritoria 7ª posición que da opción a participar en la Copa de S.M. El Rey.</string>
+    <string name="texto_2004">La temporada 2004-2005 ha culminado con el equipo campeón de su grupo (II de 2ªB).</string>
+    <string name="texto_2005">En la temporada 2005-2006 La S.D.Ponferradina consigue el ascenso a segunda división del fútbol español.</string>
+    <string name="texto_recibimiento">El equipo a su regreso, fué recibido por miles de seguidores en la ciudad, que le acompañaron en su recorrido triunfal desde el estadio hasta la Plaza del Ayuntamiento, donde cerca de 20.000 personas, presenciaron la recepción efectuada por el Ayuntamiento de Ponferrada y pudieron contemplar a todos los integrantes de la plantilla blanquiazul en el balcón municipal.</string>
+    <string name="titulo_2006">Temporada 2006/2007</string>
+    <string name="texto_2006">Se comienza la temporada con mucha ilusión por parte de la plantilla y por parte de la afición que se vuelca con el equipo, llenando el estadio habitualmente. Desgraciadamente se queda en el puesto 19 y se desciende a 2ªB.</string>
+    <string name="titulo_2007">Temporada 2007/2008</string>
+    <string name="texto_2007">La secretaría técnica confecciona una plantilla de garantías que llevará al equipo a ocupar la primera plaza de su grupo. Por tercera vez disputará una fase de ascenso. El destino querría que para la eliminatoria final el Alicante, al que los bercianos habían privado del ascenso dos temporadas antes, fuese el rival de “La Ponfe”, esta vez la gloria se la lleva el Alicante CF.</string>
+    <string name="titulo_2008">Temporada 2008/2009</string>
+    <string name="texto_2008">Se alcanza la tercera plaza, suficiente para jugar una temporada más la fase de ascenso. Para esta temporada las reglas de los playoff han cambiado y será necesario superar tres eliminatorias. Se cae en segunda ronda ante el Real Jaén.</string>
+    <string name="texto_sociedad_anonima">La Sociedad Deportiva Ponferradina se convirtió en sociedad anónima deportiva (SAD) el 19 de febrero de 2009.</string>
+    <string name="titulo_2009">Temporada 2009/2010</string>
+    <string name="texto_2009">En esta temporada la Ponferradina queda primera del grupo II de la Segunda División B. En el play-off de ascenso le tocará el Sant Andreu, en el que en la ida quedará 0-1, con gol de Jonathan Valle, y en la vuelta, un desafortunado gol en propia meta de Nacho Fernández hace que el partido se decida en los penaltis. Fue una tanda de penaltis muy larga, en la que finalmente ganó la Ponferradina por 9-8, consiguiendo su segundo ascenso a segunda división.</string>
+    <string name="titulo_2010">Temporada 2010/2011</string>
+    <string name="texto_2010">El equipo no consigue el objetivo de la permanencia y desciende al final de la temporada a Segunda División B; además Oscar de Paula, anuncia su retirada del fútbol profesional unida a la lesión de duración indefinida del capitán Rubén Vega, hace que el club pierda sus referentes de los últimos años.</string>
+    <string name="titulo_2011">Temporada 2011/2012</string>
+    <string name="texto_2011">En el grupo II de Segunda División B, el equipo consigue la clasificación para la fase de ascenso, ocupando la segunda posición. En Copa de Rey llega a dieciseisavos de final, enfrentándose al Real Madrid. En la fase de ascenso elimina al Real Jaén 2-1 y 2-0, y al Lucena CF 2-1 y 3-0, consiguiendo en la tercera ronda ante el C.D. Tenerife, su tercer ascenso a la Segunda División tras imponerse 1-0 en la ida y 1-2 en la vuelta del 24 de junio de 2012, disputada en el Estadio Heliodoro Rodríguez López.</string>
+    <string name="titulo_2012">Temporada 2012/2013</string>
+    <string name="texto_2012">El equipo consiguió la salvación matemática con varias jornadas de antelación lo que provocó que la afición se ilusionara con la fase de ascenso. La disputa estuvo reñida pero sendos empates a dos ante el Racing (casa) y Lugo (Fuera) dejaron a la Ponferradina a 1 punto del soñado Play-off a Primera División, y terminando en un meritorio 7º puesto.</string>
+    <string name="titulo_2013">Temporada 2013/2014</string>
+    <string name="texto_2013">El equipo termina con 51 puntos en el puesto 16 manteniendo la categoría y se asegura jugar por tercera temporada consecutiva en Segunda División.</string>
+    <string name="title_activity_temporadas">Temporadas</string>
+    <string name="titulo_estadio">El Toralín</string>
+    <string name="texto_estadio_1">El nuevo Estadio Municipal "El Toralín" fue inaugurado oficialmente el 5 de septiembre de 2000 en un partido amistoso que enfrentó a la Sociedad Deportiva Ponferradina contra el Real Club Celta de Vigo (0-2), si bien el primer partido oficial de liga de Segunda División B disputado en el estadio fue contra el Universidad de Oviedo con resultado 1-0 y gol marcado por Jesús Panadero (3ª jornada - temporada 2000-2001).</string>
+    <string name="texto_estadio_2">El estadio fue construido en la zona conocida como "El Toralín" dentro del núcleo urbano por el Excmo. Ayuntamiento de Ponferrada, formando parte del conjunto de instalaciones deportivas de la ciudad. El proyecto fue concebido con el propósito de que el equipo de la ciudad tuviese un campo para disputar sus partidos y actualmente ya es la sede social de la Sociedad Deportiva Ponferradina.</string>
+    <string name="texto_estadio_3">El aforo del estadio es de 8.400 espectadores, todos ellos sentados y cumpliendo las normativas que la UEFA impone para los espectáculos deportivos internacionales. El primer encuentro de esta categoría que se disputó en el estadio, fue el 1 de Junio de 2001 para el XIII Campeonato de Europa Sub-21 con el partido entre España y Bosnia (5-1). Las dimensiones del terreno de juego son de 105 x 70 metros, medida que la UEFA ha adoptado para sus competiciones oficiales. Tiene un drenaje correcto, y riego por aspersión.</string>
+    <string name="texto_estadio_4">Las instalaciones cuentan con sala de prensa, 16 cabinas de radio independientes e insonorizadas, plataformas para cámaras de televisión, situadas en la zona cubierta de tribuna, gimnasio, sala para recepción de autoridades, cafetería. Además de las oficinas, sala de juntas, vestuarios, enfermería, lavandería, etc.</string>
+    <string name="titulo_remodelacion">Remodelaciones</string>
+    <string name="texto_remodelacion_1">El estadio ha sido remodelado en dos ocasiones. En 2006, tras el ascenso a 2ª División se ampliaron todos los graderíos de 6.000 a 8.200 asientos y se reformaron el palco y la sala y cabinas de prensa. La segunda remodelación se acometió en 2011, con motivo del enfrentamiento de dieciseisavos de final de la Copa de SM El Rey ante el Real Madrid, ampliando la capacidad del estadio a la actual de 8.400 espectadores.</string>
+    <string name="titulo_partidos_seleccion">Partidos Selección sub-21</string>
+    <string name="seleccion_1">España 5-1 Bosnia (1-06-2001) 6000 espectadores</string>
+    <string name="seleccion_2">España 3-0 Polonia (16-11-2007) 8000 espectadores</string>
+    <string name="seleccion_3">España 3-1 Liechtenstein (2-03-2010) 8000 espectadores</string>
+    <string name="ubicacion_estadio">Ubicación del estadio</string>
+    <string name="imagenes_toralin">Otras imágenes del Toralín</string>
+    <string name="title_activity_leyendas">Muro de Leyendas-S.D.P</string>
+    <string name="imagenes_leyendas">Estas son algunas imágenes del muro de las leyendas de la Sociedad Deportiva Ponferradina.</string>
+    <string name="boton_leyendas">Imágenes muro de leyendas: </string>
+    <string name="title_activity_menu">Menu-S.D.Ponferradina</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_acerca_de">Acerca De</string>
+    <string name="acercaDe">Acerca de Deportiva</string>
+    <string name="agradecimientos">Agradecimientos</string>
+    <string name="creador">Creador:</string>
+    <string name="nombre_creador">App creada por David Gómez Riesgo</string>
+    <string name="colaboracion_especial">Colaboración especial:</string>
+    <string name="nombre_colaboracion_especial">Natalia Fernández Carreira</string>
+    <string name="colaboradores">Colaboradores:</string>
+    <string name="nombre_colaboradores_1">Como colaboradores más destacados las páginas web de: </string>
+	<string name="nombre_colaboradores_2">-resultados-futbol.com (Marcadores)</string>
+	<string name="nombre_colaboradores_3">-marcadores.com (Clasificación)</string>
+	<string name="nombre_colaboradores_4">-marca.com, elpais.com, lfp.es y el mundodeportivo.com (Calendario)</string>
+	<string name="nombre_colaboradores_5">-wikipedia, lafutbolteca.com, aupadeportiva.com, elbierzodigital.comn(Historia)</string>
+	<string name="nombre_colaboradores_6">-Y sobretodo a la Sociedad Deportiva Ponferradina.</string>
+</resources>

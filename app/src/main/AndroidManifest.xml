@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.deportiva.main"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.deportiva.main.MenuDeportiva"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.MenuPlantilla"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Dinu"
+            android:label="@string/title_activity_dinu" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Prieto"
+            android:label="@string/title_activity_prieto" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Carpio"
+            android:label="@string/title_activity_carpio" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Alan"
+            android:label="@string/title_activity_alan" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Lucas"
+            android:label="@string/title_activity_lucas" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Castaneda"
+            android:label="@string/title_activity_castaneda" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Camille"
+            android:label="@string/title_activity_camille" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Oscar"
+            android:label="@string/title_activity_oscar" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Aguilar"
+            android:label="@string/title_activity_aguilar" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Jonathan"
+            android:label="@string/title_activity_jonathan" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Acoran"
+            android:label="@string/title_activity_acoran" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Rueda"
+            android:label="@string/title_activity_rueda" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Andy"
+            android:label="@string/title_activity_andy" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Adan"
+            android:label="@string/title_activity_adan" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Tete"
+            android:label="@string/title_activity_tete" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Sobrino"
+            android:label="@string/title_activity_sobrino" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Cristian"
+            android:label="@string/title_activity_cristian" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Berrocal"
+            android:label="@string/title_activity_berrocal" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Infante"
+            android:label="@string/title_activity_infante" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Yuri"
+            android:label="@string/title_activity_yuri" >
+        </activity>
+        <activity
+            android:name="com.deportiva.entradas.Entradas"
+            android:label="@string/title_activity_entradas" >
+        </activity>
+        <activity
+            android:name="com.deportiva.directiva.Directiva"
+            android:label="@string/title_activity_directiva" >
+        </activity>
+        <activity
+            android:name="com.deportiva.cuerpo.Cuerpo"
+            android:label="@string/title_activity_cuerpo" >
+        </activity>
+        <activity
+            android:name="com.deportiva.enlaces.Enlaces"
+            android:label="@string/title_activity_enlaces" >
+        </activity>
+        <activity
+            android:name="com.deportiva.himno.Canciones"
+            android:label="@string/title_activity_canciones" >
+        </activity>
+        <activity
+            android:name="com.deportiva.himno.Himno"
+            android:label="@string/title_activity_himno" >
+        </activity>
+        <activity
+            android:name="com.deportiva.himno.VirgenEncina"
+            android:label="@string/title_activity_virgen_encina" >
+        </activity>
+        <activity
+            android:name="com.deportiva.galeria.Galeria"
+            android:label="@string/title_activity_galeria" >
+        </activity>
+        <activity
+            android:name="com.deportiva.historia.Historia"
+            android:label="@string/title_activity_historia" >
+        </activity>
+        <activity
+            android:name="com.deportiva.cuentas.Cuentas"
+            android:label="@string/title_activity_cuentas" >
+        </activity>
+        <activity
+            android:name="com.deportiva.cuentas.Ingresos"
+            android:label="@string/title_activity_ingresos" >
+        </activity>
+        <activity
+            android:name="com.deportiva.cuentas.Gastos"
+            android:label="@string/title_activity_gastos" >
+        </activity>
+        <activity
+            android:name="com.deportiva.marcadores.Marcador"
+            android:label="@string/title_activity_marcador" >
+        </activity>
+        <activity
+            android:name="com.deportiva.clasificacion.Clasificacion"
+            android:label="@string/title_activity_clasificacion" >
+        </activity>
+        <activity
+            android:name="com.deportiva.calendario.IntroCalendario"
+            android:label="@string/title_activity_intro_calendario" >
+        </activity>
+        <activity
+            android:name="com.deportiva.estadio.Estadio"
+            android:label="@string/title_activity_estadio" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Kepa"
+            android:label="@string/title_activity_kepa" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Gaztanaga"
+            android:label="@string/title_activity_gaztanaga" >
+        </activity>
+        <activity
+            android:name="com.deportiva.plantilla.Melero"
+            android:label="@string/title_activity_melero" >
+        </activity>
+        <activity
+            android:name="com.deportiva.historia.Temporadas"
+            android:label="@string/title_activity_temporadas" >
+        </activity>
+        <activity
+            android:name="com.deportiva.estadio.Leyendas"
+            android:label="@string/title_activity_leyendas" >
+        </activity>
+        <activity
+            android:name="com.deportiva.ayuda.AcercaDe"
+            android:label="@string/title_activity_acerca_de" >
+        </activity>
+    </application>
+
+</manifest>
