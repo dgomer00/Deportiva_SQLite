@@ -43,7 +43,7 @@ public class AdaptadorCuerpo extends ArrayAdapter<Object> {
 		
 		ImageView icono = (ImageView) item.findViewById(R.id.icono);
 		icono.setImageResource(datos[position].getImage());
-		
+
 		TextView nombre = (TextView) item.findViewById(R.id.nombre);
 		nombre.setText(datos[position].getNombre());
 		
