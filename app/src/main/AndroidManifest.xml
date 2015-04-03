@@ -4,12 +4,17 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -201,6 +206,10 @@
         <activity
             android:name="com.deportiva.ayuda.AcercaDe"
             android:label="@string/title_activity_acerca_de" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.SignIn"
+            android:label="@string/title_activity_sign_in" >
         </activity>
     </application>
 

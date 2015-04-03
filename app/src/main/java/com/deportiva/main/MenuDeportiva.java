@@ -1,7 +1,7 @@
 package com.deportiva.main;
 
+import com.deportiva.database.SignIn;
 import com.example.deportiva.main.R;
-
 
 import com.deportiva.ayuda.AcercaDe;
 import com.deportiva.calendario.IntroCalendario;
@@ -29,6 +29,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+
 
 public class MenuDeportiva extends ActionBarActivity {
 
@@ -106,8 +107,8 @@ public class MenuDeportiva extends ActionBarActivity {
 					startActivity(inten);
 					break;
                 case 13:
-                   // inten = new Intent(MenuDeportiva.this,SignIn.class);
-                   // startActivity(inten);
+                    inten = new Intent(MenuDeportiva.this,SignIn.class);
+                    startActivity(inten);
                     break;
 				case 14:
 					finish();

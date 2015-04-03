@@ -559,4 +559,9 @@ Luchad, blanquiazules, por honrar nuestra región!\n
 	<string name="nombre_colaboradores_4">-marca.com, elpais.com, lfp.es y el mundodeportivo.com (Calendario)</string>
 	<string name="nombre_colaboradores_5">-wikipedia, lafutbolteca.com, aupadeportiva.com, elbierzodigital.comn(Historia)</string>
 	<string name="nombre_colaboradores_6">-Y sobretodo a la Sociedad Deportiva Ponferradina.</string>
+    <string name="title_activity_sign_in">Inicio de Sesión</string>
+    <string name="inicio_sesion">Iniciar sesión</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+
 </resources>
