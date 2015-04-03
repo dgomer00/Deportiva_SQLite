@@ -105,7 +105,11 @@ public class MenuDeportiva extends ActionBarActivity {
 					inten = new Intent(MenuDeportiva.this,Estadio.class);
 					startActivity(inten);
 					break;
-				case 13:
+                case 13:
+                   // inten = new Intent(MenuDeportiva.this,SignIn.class);
+                   // startActivity(inten);
+                    break;
+				case 14:
 					finish();
 					break;
 				default:

@@ -25,6 +25,7 @@ public class Adaptador extends ArrayAdapter<Object> {
 		new ArrayDatos("Himno", "Canciones de la Deportiva", R.drawable.himno),
 		new ArrayDatos("Historia", "Breve historia de nuestro club", R.drawable.historia),
 		new ArrayDatos("Estadio", "Breve reseña del Toralín", R.drawable.estadio),
+        new ArrayDatos("Modificaciones","Modificación de la base de datos(solo para el administrador)",R.drawable.base),
 		new ArrayDatos("Salir", "Cerrar la aplicación", R.drawable.exit)
 	};
 	
