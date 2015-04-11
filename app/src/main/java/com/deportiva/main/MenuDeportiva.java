@@ -1,5 +1,6 @@
 package com.deportiva.main;
 
+import com.deportiva.database.BaseDatosOpenHelper;
 import com.deportiva.database.SignIn;
 import com.example.deportiva.main.R;
 
@@ -38,7 +39,10 @@ public class MenuDeportiva extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menudeportiva);
 		setTitle("Menu-S.D.Ponferradina");
-		
+
+        //Creación de la base de datos
+        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(getApplicationContext(),"BaseDatosDeportiva",null,1);
+		baseHelper.getWritableDatabase();
 		
 		 Adaptador adaptador = new Adaptador(this);
 		 ListView listOpciones = (ListView)findViewById(R.id.lista);

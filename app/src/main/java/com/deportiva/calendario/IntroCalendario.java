@@ -63,7 +63,7 @@ public class IntroCalendario extends ActionBarActivity {
 					}
 				});
 				
-				//Captura del evento para la pagina del diario el país correspondiente a la liga adelante
+				//Captura del evento para la pagina del diario el pais correspondiente a la liga adelante
 				Button bt_el_pais = (Button) findViewById(R.id.boton_el_pais);
 				bt_el_pais.setOnClickListener(new OnClickListener() {
 					

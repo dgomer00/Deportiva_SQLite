@@ -15,8 +15,8 @@ public class GalleryAdapter extends BaseAdapter
     Context context;
     Integer[] imagenes;
     int background;
-    //guardamos las imágenes reescaladas para mejorar el rendimiento ya que estas operaciones son costosas
-    //se usa SparseArray siguiendo la recomendación de Android Lint
+    //guardamos las imagenes reescaladas para mejorar el rendimiento ya que estas operaciones son costosas
+    //se usa SparseArray siguiendo la recomendacion de Android Lint
     SparseArray<Bitmap> imagenesEscaladas = new SparseArray<Bitmap>(7);
      
     public GalleryAdapter(Context context, Integer[] imagenes)
@@ -25,7 +25,7 @@ public class GalleryAdapter extends BaseAdapter
         this.imagenes = imagenes;
         this.context = context;
          
-        //establecemos un marco para las imágenes (estilo por defecto proporcionado)
+        //establecemos un marco para las imagenes (estilo por defecto proporcionado)
         //por android y definido en /values/attr.xml
         TypedArray typedArray = context.obtainStyledAttributes(R.styleable.Gallery1);
         background = typedArray.getResourceId(R.styleable.Gallery1_android_galleryItemBackground, 1);
@@ -55,7 +55,7 @@ public class GalleryAdapter extends BaseAdapter
     {
          ImageView imagen = new ImageView(context);
  
-        //reescalamos la imagen para evitar "java.lang.OutOfMemory" en el caso de imágenes de gran resolución
+        //reescalamos la imagen para evitar "java.lang.OutOfMemory" en el caso de imagenes de gran resolucion
          //como es este ejemplo
          if (imagenesEscaladas.get(position) == null)
          {

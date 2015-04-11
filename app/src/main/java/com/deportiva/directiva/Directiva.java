@@ -23,7 +23,7 @@ public class Directiva extends ActionBarActivity {
 		setContentView(R.layout.activity_directiva);
 		setTitle("Directiva-S.D.Ponferradina");
 		
-		//Capturar el evento para ir a la página del organigrama y descargarlo
+		//Capturar el evento para ir a la pagina del organigrama y descargarlo
 				Button organigrama = (Button) findViewById(R.id.boton_organigrama);
 				organigrama.setOnClickListener(new OnClickListener() {
 					

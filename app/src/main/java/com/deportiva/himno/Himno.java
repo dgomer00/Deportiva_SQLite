@@ -53,7 +53,7 @@ public class Himno extends ActionBarActivity {
 	//Este metodo es llamado cuando se pulsa el boton back
 	public void onBackPressed()
     {
-		//terminamos la canción y lo demás lo dejamos por defecto.LLamamos al método destruir que terminara con la canción si existe y sino, no hará nada.
+		//terminamos la cancion y lo demas lo dejamos por defecto.LLamamos al metodo destruir que terminara con la cancion si existe y sino, no hara nada.
         destruir();
         super.onBackPressed();
         return;
