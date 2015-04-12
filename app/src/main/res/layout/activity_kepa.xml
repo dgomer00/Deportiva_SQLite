@@ -58,7 +58,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/nombre_depor_kepa"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -94,7 +93,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/nombre_kepa"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -129,7 +127,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/posicion_portero"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -163,7 +160,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/nacimiento_kepa"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -197,7 +193,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/pais_kepa"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -231,7 +226,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/peso_kepa"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -265,7 +259,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:text="@string/estatura_kepa"
                 android:textColor="#990000"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -299,8 +292,7 @@
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:background="@color/transparent"
-			    android:text="@string/proc_kepa"
-			    android:textColor="#990000"
+                android:textColor="#990000"
 			    android:textSize="19sp"
 			    android:textStyle="bold" />
 
@@ -333,8 +325,7 @@
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:background="@color/transparent"
-			    android:text="@string/dorsal_kepa"
-			    android:textColor="#990000"
+                android:textColor="#990000"
 			    android:textSize="19sp"
 			    android:textStyle="bold" />
 
