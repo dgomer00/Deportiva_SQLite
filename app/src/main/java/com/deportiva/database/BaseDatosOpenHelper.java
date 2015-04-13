@@ -5,6 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TextView;
+
+import com.example.deportiva.main.R;
+
+import java.sql.SQLDataException;
 
 /**
  * Created by David on 03/04/2015.
@@ -113,5 +118,42 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
         }
         db.close();
         return true;
+    }
+
+    public static String[] cargar(BaseDatosOpenHelper baseHelper, String nombre, int dorsal, int id_equipo){
+
+        String[] jugador = new String[9];
+
+        SQLiteDatabase db = baseHelper.getReadableDatabase();
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT * FROM Jugadores WHERE Nombre='"+nombre+"' AND Dorsal="+dorsal+" AND Id_equipo="+id_equipo, null);
+            int cantidad = c.getCount();//Cantidad de registros
+
+            if (cantidad==1 && c.moveToFirst()) {//Si la cantidad de registros es igual a 1 quiere decir que encontro al jugador y procedemos a rellenar el array
+                    jugador[0]=c.getString(1);
+                    jugador[1]=c.getString(2);
+                    jugador[2]=c.getString(3);
+                    jugador[3]=c.getString(4);
+                    jugador[4]=c.getString(5);
+                    jugador[5]=c.getString(6);
+                    jugador[6]=c.getString(7);
+                    jugador[7]=c.getString(8);
+                    jugador[8]=c.getString(9);
+
+                return jugador;
+
+                }else if(cantidad==0){//Sino se encuentra el jugador se enviara en la primera posicion del array un mensaje.
+                jugador[0]="Jugador Inexistente";
+                return jugador;
+            }else{//Si el numero de registros no es ni 0 ni 1, quiere decir que hay más de un jugador con el mismo nombre,dorsal y equipo, algo que es imposible puesto que los dorsales no se repiten.
+                jugador[0]="Error";
+                return jugador;
+            }
+
+            // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arreglo);
+            // ListView lista = (ListView)findViewById(R.id.Lista);
+            // lista.setAdapter(adapter);
+        }
+    return jugador;
     }
 }

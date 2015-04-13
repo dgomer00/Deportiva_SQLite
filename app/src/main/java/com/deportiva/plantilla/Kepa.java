@@ -13,11 +13,16 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class Kepa extends ActionBarActivity {
+
+    //Este array de String lo usaremos para almacenar los datos leidos de la base de datos
+    private String[] jugador = new String[9];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +31,76 @@ public class Kepa extends ActionBarActivity {
 		//Para que no se gire la pantalla al poner el movil en horizontal
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
         //Cargamos los datos
-        cargar();
-	}
+        String nombre_jugador = "Arrizabalaga";
+        int dorsal_jugador = 1;
+        int id_equipo = 15;//ID_equipo de la S.D.Ponferradina.
+        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+        jugador=BaseDatosOpenHelper.cargar(baseHelper, nombre_jugador, dorsal_jugador, id_equipo);
+
+        //Identificar los textView para despues rellenarlos con los que leamos de la base de datos
+        TextView nombre = (TextView)findViewById(R.id.textView2);
+        TextView nombre_completo = (TextView)findViewById(R.id.textView4);
+        TextView posicion = (TextView)findViewById(R.id.textView6);
+        TextView fecha_nacimiento = (TextView)findViewById(R.id.textView8);
+        TextView nacido = (TextView)findViewById(R.id.textView10);
+        TextView peso = (TextView)findViewById(R.id.textView12);
+        TextView estatura = (TextView)findViewById(R.id.textView14);
+        TextView procedencia = (TextView)findViewById(R.id.textView16);
+        TextView dorsal = (TextView)findViewById(R.id.textView18);
+
+        //Identificamos el resto de elementos de la ventana para ocultarlos en casa de que no se encuentre el jugador.
+        ImageView imagen_jugador = (ImageView)findViewById(R.id.imageView1);
+        TextView texto1 = (TextView)findViewById(R.id.textView1);
+        TextView texto2 = (TextView)findViewById(R.id.textView3);
+        TextView texto3 = (TextView)findViewById(R.id.textView5);
+        TextView texto4 = (TextView)findViewById(R.id.textView7);
+        TextView texto5 = (TextView)findViewById(R.id.textView9);
+        TextView texto6 = (TextView)findViewById(R.id.textView11);
+        TextView texto7 = (TextView)findViewById(R.id.textView13);
+        TextView texto8 = (TextView)findViewById(R.id.textView15);
+        TextView texto9 = (TextView)findViewById(R.id.textView17);
+
+
+
+        if(jugador[0].equals("Jugador Inexistente") || jugador[0].equals("Error")){//Sino se encuentra el jugador se ocultaran todos los elementos y solo se mostrara un mensaje
+
+            if(jugador[0].equals("Jugador Inexistente")) {//El mensaje que se muestra sino se encontro nigun jugador.
+                nombre.setText(jugador[0]);
+            }else{//El mensaje que se mostrara si hay varios jugadores con las mismas caracteristicas.
+                nombre.setText("Varios jugadores con las mismas caracteristicas");
+            }
+
+            posicion.setVisibility(View.INVISIBLE);
+            fecha_nacimiento.setVisibility(View.INVISIBLE);
+            nacido.setVisibility(View.INVISIBLE);
+            peso.setVisibility(View.INVISIBLE);
+            estatura.setVisibility(View.INVISIBLE);
+            procedencia.setVisibility(View.INVISIBLE);
+            dorsal.setVisibility(View.INVISIBLE);
+            imagen_jugador.setVisibility(View.INVISIBLE);
+            texto1.setVisibility(View.INVISIBLE);
+            texto2.setVisibility(View.INVISIBLE);
+            texto3.setVisibility(View.INVISIBLE);
+            texto4.setVisibility(View.INVISIBLE);
+            texto5.setVisibility(View.INVISIBLE);
+            texto6.setVisibility(View.INVISIBLE);
+            texto7.setVisibility(View.INVISIBLE);
+            texto8.setVisibility(View.INVISIBLE);
+            texto9.setVisibility(View.INVISIBLE);
+
+        }else {
+            nombre.setText(jugador[0]);
+            nombre_completo.setText(jugador[1]);
+            posicion.setText(jugador[2]);
+            fecha_nacimiento.setText(jugador[3]);
+            nacido.setText(jugador[4]);
+            peso.setText(jugador[5]);
+            estatura.setText(jugador[6]);
+            procedencia.setText(jugador[7]);
+            dorsal.setText(jugador[8]);
+        }
+        }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,48 +124,4 @@ public class Kepa extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-    public void cargar() {
-
-        //Identificar los textView para despues rellenarlos con los que leamos de la base de datos
-        TextView nombre = (TextView)findViewById(R.id.textView2);
-        TextView nombre_completo = (TextView)findViewById(R.id.textView4);
-        TextView posicion = (TextView)findViewById(R.id.textView6);
-        TextView fecha_nacimiento = (TextView)findViewById(R.id.textView8);
-        TextView nacido = (TextView)findViewById(R.id.textView10);
-        TextView peso = (TextView)findViewById(R.id.textView12);
-        TextView estatura = (TextView)findViewById(R.id.textView14);
-        TextView procedencia = (TextView)findViewById(R.id.textView16);
-        TextView dorsal = (TextView)findViewById(R.id.textView18);
-
-        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
-        SQLiteDatabase db = baseHelper.getReadableDatabase();
-        if (db != null) {
-            Cursor c = db.rawQuery("SELECT * FROM Jugadores WHERE Nombre='Arrizabalaga' AND Dorsal=1", null);
-            int cantidad = c.getCount();//Cantidad de registros
-            int i = 0;
-            // arreglo = new String[cantidad];
-            if (c.moveToFirst()) {
-                do {
-                    nombre.setText(c.getString(1));
-                    nombre_completo.setText(c.getString(2));
-                    posicion.setText(c.getString(3));
-                    fecha_nacimiento.setText(c.getString(4));
-                    nacido.setText(c.getString(5));
-                    peso.setText(c.getString(6));
-                    estatura.setText(c.getString(7));
-                    procedencia.setText(c.getString(8));
-                    dorsal.setText(c.getString(9));
-                    //String linea = c.getInt(0) + " " + c.getString(1) + " " + c.getString(2) + " " + c.getInt(3);
-
-                    //arreglo[i]=linea;
-                    //i++;
-
-                } while (c.moveToNext());
-            }
-
-            // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arreglo);
-            // ListView lista = (ListView)findViewById(R.id.Lista);
-            // lista.setAdapter(adapter);
-        }
-    }
 }

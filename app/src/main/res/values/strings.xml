@@ -37,14 +37,6 @@
     <string name="proc_prieto">Mirandés</string>
     <string name="dorsal_prieto">13</string>
     <string name="title_activity_kepa">Kepa Arrizabalaga</string>
-    <string name="nombre_depor_kepa">Arrizabalaga</string>
-    <string name="nombre_kepa">Kepa Arrizabalaga Revuelta</string>
-    <string name="nacimiento_kepa">03/10/1994</string>
-    <string name="pais_kepa">Ondárroa(Vizcaya)</string>
-    <string name="peso_kepa">85</string>
-    <string name="estatura_kepa">1.89 m.</string>
-    <string name="proc_kepa">Athletic Club</string>
-    <string name="dorsal_kepa">1</string>
     <string name="title_activity_carpio">Carpio</string>
     <string name="nombre_depor_carpio">Carpio</string>
     <string name="nombre_carpio">Javier Carpio Martín</string>
