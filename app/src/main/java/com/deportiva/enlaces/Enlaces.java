@@ -16,11 +16,6 @@ import android.widget.ImageButton;
 
 public class Enlaces extends ActionBarActivity {
 
-	private ImageButton bt_facebook;
-	private ImageButton bt_deportiva;
-	private ImageButton bt_instagram;
-	private ImageButton bt_twitter;
-	private ImageButton bt_ponfeTv;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +24,12 @@ public class Enlaces extends ActionBarActivity {
 		setTitle("Enlaces de Interés");
 		//Para que no se gire la pantalla al poner el movil en horizontal
 		//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-	
+
+        ImageButton bt_facebook;
+        ImageButton bt_deportiva;
+        ImageButton bt_instagram;
+        ImageButton bt_twitter;
+        ImageButton bt_ponfeTv;
 		//Capturar el evento para ir a la pagina de facebook
 		bt_facebook = (ImageButton) findViewById(R.id.bt_facebook);
 		bt_facebook.setOnClickListener(new OnClickListener() {

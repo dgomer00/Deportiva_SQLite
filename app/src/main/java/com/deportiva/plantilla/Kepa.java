@@ -58,16 +58,14 @@ public class Kepa extends ActionBarActivity {
         TextView texto8 = (TextView)findViewById(R.id.textView15);
         TextView texto9 = (TextView)findViewById(R.id.textView17);
 
-
-
         if(jugador[0].equals("Jugador Inexistente") || jugador[0].equals("Error")){//Sino se encuentra el jugador se ocultaran todos los elementos y solo se mostrara un mensaje
 
-            if(jugador[0].equals("Jugador Inexistente")) {//El mensaje que se muestra sino se encontro nigun jugador.
+            if(jugador[0].equals("Jugador Inexistente")) {//El mensaje que se muestra sino se encontro ningun jugador.
                 nombre.setText(jugador[0]);
             }else{//El mensaje que se mostrara si hay varios jugadores con las mismas caracteristicas.
                 nombre.setText("Varios jugadores con las mismas caracteristicas");
             }
-
+            //En cualquiera de los 2 casos ocultaremos es resto de elementos de la ventana
             posicion.setVisibility(View.INVISIBLE);
             fecha_nacimiento.setVisibility(View.INVISIBLE);
             nacido.setVisibility(View.INVISIBLE);
