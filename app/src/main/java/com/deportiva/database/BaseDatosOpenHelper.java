@@ -1,15 +1,11 @@
 package com.deportiva.database;
 
-import android.content.ContentValues;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.TextView;
 
-import com.example.deportiva.main.R;
-
-import java.sql.SQLDataException;
 
 /**
  * Created by David on 03/04/2015.
@@ -149,10 +145,6 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
                 jugador[0]="Error";
                 return jugador;
             }
-
-            // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arreglo);
-            // ListView lista = (ListView)findViewById(R.id.Lista);
-            // lista.setAdapter(adapter);
         }
     return jugador;
     }

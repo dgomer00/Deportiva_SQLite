@@ -5,8 +5,7 @@ import com.deportiva.database.BaseDatosOpenHelper;
 import com.example.deportiva.main.R;
 
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -14,15 +13,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-public class Kepa extends ActionBarActivity {
 
-    //Este array de String lo usaremos para almacenar los datos leidos de la base de datos
-    private String[] jugador = new String[9];
+public class Kepa extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +30,8 @@ public class Kepa extends ActionBarActivity {
         String nombre_jugador = "Arrizabalaga";
         int dorsal_jugador = 1;
         int id_equipo = 15;//ID_equipo de la S.D.Ponferradina.
+        //Este array de String lo usaremos para almacenar los datos leidos de la base de datos
+        String[] jugador;
         BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
         jugador=BaseDatosOpenHelper.cargar(baseHelper, nombre_jugador, dorsal_jugador, id_equipo);
 
