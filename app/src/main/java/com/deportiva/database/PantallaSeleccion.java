@@ -20,6 +20,7 @@ public class PantallaSeleccion extends ActionBarActivity {
         Button botonModificarEquipo = (Button)findViewById(R.id.button_modificar_equipos);
         Button botonAltaEquipo = (Button)findViewById(R.id.button_alta_equipo);
 
+
     }
 
 
