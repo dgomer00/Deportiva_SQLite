@@ -1,5 +1,6 @@
 package com.deportiva.database;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,7 +28,9 @@ public class SignIn extends ActionBarActivity {
 
                 BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(getApplicationContext(),"BaseDatosDeportiva",null,1);
                 if(baseHelper.testCredentials(baseHelper,user,password)){
-                    Toast.makeText(getBaseContext(), "Toma ya has accedido", Toast.LENGTH_LONG).show();
+                    Intent intent;
+                    intent = new Intent(SignIn.this,PantallaSeleccion.class);
+                    startActivity(intent);
                 }else{
                     Toast.makeText(getBaseContext(), "Usuario no registrado", Toast.LENGTH_LONG).show();
                 }

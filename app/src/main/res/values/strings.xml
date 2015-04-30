@@ -375,5 +375,9 @@ Luchad, blanquiazules, por honrar nuestra región!\n
     <string name="inicio_sesion">Iniciar sesión</string>
     <string name="hint_user">Usuario</string>
     <string name="hint_password">Contraseña</string>
-
+    <string name="title_activity_pantalla_seleccion">Modificación Datos</string>
+    <string name="boton_modificar_jugador">Modificar/Borrar Jugadores</string>
+    <string name="boton_modificar_equipos">Modificar/Borrar Equipos</string>
+    <string name="alta_jugador">Alta Jugador</string>
+    <string name="alta_equipo">Alta Equipo</string>
 </resources>
