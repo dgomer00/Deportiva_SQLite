@@ -15,12 +15,11 @@ public class PantallaSeleccion extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_seleccion);
+        //Estos serán los botones utilizados para ir a las diferentes pantallas de edición de la base de datos
         Button botonModificarJugador = (Button)findViewById(R.id.button_modificar_jugadores);
-        Button botonAltaJugador = (Button)findViewById(R.id.button_alta_jugador);
+       Button botonAltaJugador = (Button)findViewById(R.id.button_alta_jugador);
         Button botonModificarEquipo = (Button)findViewById(R.id.button_modificar_equipos);
         Button botonAltaEquipo = (Button)findViewById(R.id.button_alta_equipo);
-
-
     }
 
 
