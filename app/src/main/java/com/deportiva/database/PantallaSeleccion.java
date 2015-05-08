@@ -16,8 +16,8 @@ public class PantallaSeleccion extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_seleccion);
 
-       // Button botonModificarJugador = (Button)findViewById(R.id.button_modificar_jugadores);
-       // Button botonAltaJugador = (Button)findViewById(R.id.button_alta_jugador);
+        Button botonModificarJugador = (Button)findViewById(R.id.button_modificar_jugadores);
+        Button botonAltaJugador = (Button)findViewById(R.id.button_alta_jugador);
         Button botonModificarEquipo = (Button)findViewById(R.id.button_modificar_equipos);
         Button botonAltaEquipo = (Button)findViewById(R.id.button_alta_equipo);
 
