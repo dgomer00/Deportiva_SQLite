@@ -383,4 +383,7 @@ Luchad, blanquiazules, por honrar nuestra región!\n
     <string name="title_activity_alta_equipo">Alta Equipo</string>
     <string name="hint_nombre_equipo">Nombre Equipo</string>
     <string name ="guardar">Guardar</string>
+    <string name="title_activity_lista_equipo">Listado de los Equipos</string>
+    <string name="title_activity_modificar_equipo">Modificar Equipo</string>
+    <string name="boton_guardar_equipo">Guardar Modificación</string>
 </resources>

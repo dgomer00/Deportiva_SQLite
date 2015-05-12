@@ -218,6 +218,14 @@
             android:name="com.deportiva.database.AltaEquipo"
             android:label="@string/title_activity_alta_equipo" >
         </activity>
+        <activity
+            android:name="com.deportiva.database.ModificarEquipo"
+            android:label="@string/title_activity_modificar_equipo" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ListaEquipo"
+            android:label="@string/title_activity_lista_equipo" >
+        </activity>
     </application>
 
 </manifest>

@@ -23,11 +23,9 @@ public class AltaEquipo extends ActionBarActivity {
         ET_Nombre = (EditText)findViewById(R.id.editTextAltaEquipo);
     }
 
-    public void GuardarDatos(View view){
+    public void guardarDatos(View view){
 
-        //Hacerlo dentro de try catch-------------------------------------------
-       // ---------------------------------------------------------------------
-         //       ---------------------------------------------------------
+        //Hacerlo dentro de try catch en el caso de leer un string y pasarlo a integer
         String Nombre = ET_Nombre.getText().toString();
 
 

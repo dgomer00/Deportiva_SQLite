@@ -18,6 +18,6 @@
         android:layout_height="wrap_content"
         android:text="@string/guardar"
         android:id="@+id/button"
-        android:onClick="GuardarDatos"
+        android:onClick="guardarDatos"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
