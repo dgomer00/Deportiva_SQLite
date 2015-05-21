@@ -386,4 +386,16 @@ Luchad, blanquiazules, por honrar nuestra región!\n
     <string name="title_activity_lista_equipo">Listado de los Equipos</string>
     <string name="title_activity_modificar_equipo">Modificar Equipo</string>
     <string name="boton_guardar_equipo">Guardar Modificación</string>
+    <string name="title_activity_alta_jugador">Alta Jugador</string>
+    <string name="title_activity_modificar_jugador">Modificar Jugador</string>
+    <string name="title_activity_lista_jugadores">Lista de Jugadores</string>
+    <string name="hint_nombre_jugador">Nombre deportivo del jugador</string>
+    <string name="hint_nombre_completo_jugador">Nombre completo del jugador</string>
+    <string name="hint_posicion_jugador">Posición jugador</string>
+    <string name="hint_fecha_nacimiento">Fecha Nacimiento (aaaa-mm-dd)</string>
+    <string name="hint_nacido">Lugar de nacimiento</string>
+    <string name="hint_peso">Peso</string>
+    <string name="hint_estatura">Estatura</string>
+    <string name="hint_procedencia">Equipo procedencia</string>
+    <string name="hint_dorsal">Dorsal</string>
 </resources>

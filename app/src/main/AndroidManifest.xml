@@ -226,6 +226,18 @@
             android:name="com.deportiva.database.ListaEquipo"
             android:label="@string/title_activity_lista_equipo" >
         </activity>
+        <activity
+            android:name="com.deportiva.database.AltaJugador"
+            android:label="@string/title_activity_alta_jugador" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ModificarJugador"
+            android:label="@string/title_activity_modificar_jugador" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ListaJugadores"
+            android:label="@string/title_activity_lista_jugadores" >
+        </activity>
     </application>
 
 </manifest>
