@@ -46,6 +46,15 @@ public class PantallaSeleccion extends ActionBarActivity {
             }
         });
 
+        botonModificarJugador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inten = new Intent(PantallaSeleccion.this,ListaJugadores.class);
+                startActivity(inten);
+
+            }
+        });
+
     }
 
     @Override
