@@ -23,6 +23,13 @@ public class ListaJugadores extends ActionBarActivity {
     ListView listaJugadores;
     protected Object mActionMode;
     public int selectedItem = -1;
+    public int Id_equipo;//Este id sera utilizado para encontrar el equipo al que pertenece el jugador para mostarlo en la lista.
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargar();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +65,8 @@ public class ListaJugadores extends ActionBarActivity {
             }
         });
     }
-//------------------------mirar este bien------------------------------------------
-    //--En el método cargar de la clase BaseDatosOpenHelper se leen todos los registros como string
+
+
     public void cargar(){
         BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this,"BaseDatosDeportiva",null,1);
         SQLiteDatabase db = baseHelper.getReadableDatabase();
@@ -70,8 +77,9 @@ public class ListaJugadores extends ActionBarActivity {
             arreglo = new String[cantidad];
             if (c.moveToFirst()){
                 do{
+                    Id_equipo=c.getInt(10);
                     String linea =c.getInt(0)+" Nombre deportivo: "+ c.getString(1)+"\nNombre  completo: "+ c.getString(2)+"\nPosición: "+ c.getString(3)+"\nFecha nacimiento: "+ c.getString(4)
-                            +"\nNació en: "+ c.getString(5)+ "\nPeso :"+ c.getFloat(6)+ " Estatura: "+ c.getFloat(7)+"\nProcedencia: "+ c.getString(8)+"\nDorsal: "+ c.getInt(9);
+                            +"\nNació en: "+ c.getString(5)+ "\nPeso :"+ c.getFloat(6)+ " Estatura: "+ c.getFloat(7)+"\nProcedencia: "+ c.getString(8)+"\nDorsal: "+ c.getInt(9)+"\nEquipo: "+nombreEquipo(Id_equipo);
 
                     arreglo[i]=linea;
                     i++;
@@ -83,6 +91,23 @@ public class ListaJugadores extends ActionBarActivity {
             ListView lista = (ListView)findViewById(R.id.ListaJugadores);
             lista.setAdapter(adapter);
         }
+    }
+
+    public String nombreEquipo(int Id) {
+        String linea=null;
+        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+        SQLiteDatabase db = baseHelper.getReadableDatabase();
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT Nombre FROM Equipos where Id="+Id, null);
+            int cantidad = c.getCount();//Cantidad de registros
+            int i = 0;
+            if (c.moveToFirst()) {
+                do {
+                    linea = c.getString(0);
+                } while (c.moveToNext());
+            }
+        }
+        return linea;
     }
 
 

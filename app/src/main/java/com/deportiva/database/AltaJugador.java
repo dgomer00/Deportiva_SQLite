@@ -45,6 +45,7 @@ public class AltaJugador extends ActionBarActivity {
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, equipos); //selected item will look like a spinner set from XML
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(spinnerArrayAdapter);
+
     }
 
 
@@ -100,6 +101,7 @@ public class AltaJugador extends ActionBarActivity {
             } catch (ParseException ex) {
                 mensaje = "Fecha nacimiento incorrecta";
                 Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+                //Si la fecha no esta en el formato correcto saldremos de este método mostrando el mensaje anterior.
                 return;
             }
 
@@ -125,7 +127,7 @@ public class AltaJugador extends ActionBarActivity {
                 registroNuevo.put("Estatura", estatura);
                 registroNuevo.put("Procedencia", procedencia);
                 registroNuevo.put("Dorsal", dorsal);
-                registroNuevo.put("Id_equipo", id_equipo);//Para este dato cogerlo del spinner.
+                registroNuevo.put("Id_equipo", id_equipo);//Este dato se coge de la opcion seleccionada en el spinner.
                 long i = db.insert("Jugadores", null, registroNuevo);
                 if (i > 0) {
                     Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();

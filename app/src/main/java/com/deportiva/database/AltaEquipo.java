@@ -25,23 +25,35 @@ public class AltaEquipo extends ActionBarActivity {
 
     public void guardarDatos(View view){
 
-        //Hacerlo dentro de try catch en el caso de leer un string y pasarlo a integer
-        String Nombre = ET_Nombre.getText().toString();
+        if(!campoVacio()) {
+            //Hacerlo dentro de try catch en el caso de leer un string y pasarlo a integer
+            String Nombre = ET_Nombre.getText().toString();
 
 
-        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this,"BaseDatosDeportiva",null,1);
-        SQLiteDatabase db = baseHelper.getWritableDatabase();
-        if(db!=null){
-            ContentValues registroNuevo = new ContentValues();
-            registroNuevo.put("Nombre",Nombre);
-            long i = db.insert("Equipos",null,registroNuevo);
-            if(i>0){
-                Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
+            BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+            SQLiteDatabase db = baseHelper.getWritableDatabase();
+            if (db != null) {
+                ContentValues registroNuevo = new ContentValues();
+                registroNuevo.put("Nombre", Nombre);
+                long i = db.insert("Equipos", null, registroNuevo);
+                if (i > 0) {
+                    Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
+                }
+
             }
-
+        }else{
+            Toast.makeText(this, "Rellene el dato", Toast.LENGTH_SHORT).show();
         }
     }
 
+    public boolean campoVacio(){
+        boolean vacio =false;
+        if(ET_Nombre.getText().toString().isEmpty()){
+            vacio=true;
+            return vacio;
+        }
+        return vacio;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
