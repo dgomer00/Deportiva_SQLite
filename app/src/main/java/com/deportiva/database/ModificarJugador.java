@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -21,9 +22,11 @@ import java.util.Date;
 
 public class ModificarJugador extends ActionBarActivity {
 
-    EditText ET_Nombre, ET_NombreDeportivo, ET_Posicion, ET_FechaNacimiento, ET_LugarNacimiento, ET_Peso, ET_Estatura, ET_Procedencia, ET_Dorsal ;
+    EditText ET_Nombre, ET_NombreDeportivo, ET_FechaNacimiento, ET_LugarNacimiento, ET_Peso, ET_Estatura, ET_Procedencia, ET_Dorsal ;
     int Id=0,Id_equipo;
     Spinner spinner;
+    private AutoCompleteTextView ET_Posicion;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class ModificarJugador extends ActionBarActivity {
         setContentView(R.layout.activity_modificar_jugador);
         ET_Nombre = (EditText)findViewById(R.id.editTextNombreJugador);
         ET_NombreDeportivo = (EditText)findViewById(R.id.editTextNombreCompletoJugador);
-        ET_Posicion = (EditText)findViewById(R.id.editTextPosicionJugador);
+        ET_Posicion = (AutoCompleteTextView)findViewById(R.id.autoCompletePosicionJugador);
         ET_FechaNacimiento = (EditText)findViewById(R.id.editTextFechaJugador);
         ET_LugarNacimiento = (EditText)findViewById(R.id.editTextLugarNacimientoJugador);
         ET_Peso = (EditText)findViewById(R.id.editTextPesoJugador);
@@ -44,6 +47,16 @@ public class ModificarJugador extends ActionBarActivity {
         if(b!=null){
             recuperaInformacion(b.getInt("IdModifica"));
         }
+
+        //Cargamos los datos para el editText auto completado--------------------------------------------------------------------------------------
+        // get the defined string-array
+        String[] colors = getResources().getStringArray(R.array.posicion);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,colors);
+        // set adapter for the auto complete fields
+        ET_Posicion.setAdapter(adapter);
+        // specify the minimum type of characters before drop-down list is shown
+        ET_Posicion.setThreshold(1);
+        //------------------------------------------------------------------------------------------------------------------------------------------
 
         //Cargamos los equipos de la liga en el spinner, más adelante, se cogerá el id del equipo seleccionado cuando se vaya a guardar un equipo en la base de datos.
         String[]equipos = cargarEquipos();

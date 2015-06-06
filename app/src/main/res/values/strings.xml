@@ -400,4 +400,10 @@ Luchad, blanquiazules, por honrar nuestra región!\n
     <string name="hint_dorsal">Dorsal</string>
     <string name="lista_equipos">Lista Equipos</string>
     <string name="lista_jugadores">Lista Jugadores</string>
+    <string-array name="posicion">
+        <item >Portero</item>
+        <item >Defensa</item>
+        <item >Centrocampista</item>
+        <item >Delantero</item>
+    </string-array>
 </resources>
