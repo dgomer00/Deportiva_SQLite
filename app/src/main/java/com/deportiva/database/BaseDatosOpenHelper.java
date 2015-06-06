@@ -112,6 +112,7 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
             db.close();
             return false;
         }
+        cursor.close();
         db.close();
         return true;
     }
@@ -136,6 +137,7 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
                     jugador[7]=c.getString(8);
                     jugador[8]=c.getString(9);
 
+                c.close();
                 return jugador;
 
                 }else if(cantidad==0){//Sino se encuentra el jugador se enviara en la primera posicion del array un mensaje.
@@ -145,7 +147,9 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
                 jugador[0]="Error";
                 return jugador;
             }
+
         }
+
     return jugador;
     }
 }

@@ -44,7 +44,6 @@ public class ModificarEquipo extends ActionBarActivity {
                         Toast.makeText(this, "Registro Modificado", Toast.LENGTH_SHORT).show();
                         super.onBackPressed();
                     }
-
                 }
             } else {
                 Toast.makeText(this, "Equipo ya dado de alta. Introduzca otro", Toast.LENGTH_SHORT).show();
@@ -85,12 +84,12 @@ public class ModificarEquipo extends ActionBarActivity {
         SQLiteDatabase db = baseHelper.getReadableDatabase();
         if (db != null) {
             Cursor c = db.rawQuery("SELECT Nombre FROM Equipos WHERE Nombre='"+Nombre+"'", null);
-            int cantidad = c.getCount();//Cantidad de registros
             if (c.moveToFirst()) {
                 do {
                     dato = c.getString(0);
                 } while (c.moveToNext());
             }
+            c.close();
         }
         if(dato.equals(Nombre)){
             encontrado = true;

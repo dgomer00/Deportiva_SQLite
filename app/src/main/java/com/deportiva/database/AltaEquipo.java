@@ -42,7 +42,6 @@ public class AltaEquipo extends ActionBarActivity {
                     if (i > 0) {
                         Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
                     }
-
                 }
             } else {
                 Toast.makeText(this, "Equipo ya dado de alta. Introduzca otro", Toast.LENGTH_SHORT).show();
@@ -67,19 +66,18 @@ public class AltaEquipo extends ActionBarActivity {
         SQLiteDatabase db = baseHelper.getReadableDatabase();
         if (db != null) {
             Cursor c = db.rawQuery("SELECT Nombre FROM Equipos WHERE Nombre='"+Nombre+"'", null);
-            int cantidad = c.getCount();//Cantidad de registros
             if (c.moveToFirst()) {
                 do {
                     dato = c.getString(0);
                 } while (c.moveToNext());
             }
+            c.close();
         }
         if(dato.equals(Nombre)){
             encontrado = true;
         }
         return encontrado;
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

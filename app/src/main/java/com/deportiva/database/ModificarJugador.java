@@ -26,7 +26,6 @@ public class ModificarJugador extends ActionBarActivity {
     int Id=0,Id_equipo;
     Spinner spinner;
     private AutoCompleteTextView ET_Posicion;
-    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +50,7 @@ public class ModificarJugador extends ActionBarActivity {
         //Cargamos los datos para el editText auto completado--------------------------------------------------------------------------------------
         // get the defined string-array
         String[] colors = getResources().getStringArray(R.array.posicion);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,colors);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,colors);
         // set adapter for the auto complete fields
         ET_Posicion.setAdapter(adapter);
         // specify the minimum type of characters before drop-down list is shown
@@ -61,7 +60,7 @@ public class ModificarJugador extends ActionBarActivity {
         //Cargamos los equipos de la liga en el spinner, más adelante, se cogerá el id del equipo seleccionado cuando se vaya a guardar un equipo en la base de datos.
         String[]equipos = cargarEquipos();
         spinner = (Spinner) findViewById(R.id.spinnerEquipos);
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, equipos); //selected item will look like a spinner set from XML
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, equipos); //selected item will look like a spinner set from XML
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(spinnerArrayAdapter);
 
@@ -128,7 +127,9 @@ public class ModificarJugador extends ActionBarActivity {
 
                 } while (c.moveToNext());
             }
+            c.close();
         }
+
         return arreglo;
     }
 
@@ -138,13 +139,12 @@ public class ModificarJugador extends ActionBarActivity {
         SQLiteDatabase db = baseHelper.getReadableDatabase();
         if (db != null) {
             Cursor c = db.rawQuery("SELECT * FROM Equipos where Id="+Id_equipo, null);
-            int cantidad = c.getCount();//Cantidad de registros
-            int i = 0;
             if (c.moveToFirst()) {
                 do {
                     linea = c.getInt(0) + " " + c.getString(1);
                 } while (c.moveToNext());
             }
+            c.close();
         }
         return linea;
     }
