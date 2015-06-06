@@ -85,9 +85,10 @@ public class ListaEquipo extends ActionBarActivity {
                 }while(c.moveToNext());
             }
 
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arreglo);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,arreglo);
             ListView lista = (ListView)findViewById(R.id.Lista);
             lista.setAdapter(adapter);
+            c.close();
         }
     }
 

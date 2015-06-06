@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.MultiAutoCompleteTextView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -28,7 +26,6 @@ public class AltaJugador extends ActionBarActivity {
     EditText ET_Nombre, ET_NombreDeportivo, ET_FechaNacimiento, ET_LugarNacimiento, ET_Peso, ET_Estatura, ET_Procedencia, ET_Dorsal ;
     Spinner spinner;
     private AutoCompleteTextView ET_Posicion;
-    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +44,7 @@ public class AltaJugador extends ActionBarActivity {
         //----------------------------------------Esto es para rellenar el texto de la posición que sera autocompletado-------------------------------------------------------
         // get the defined string-array
         String[] colors = getResources().getStringArray(R.array.posicion);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,colors);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,colors);
         // set adapter for the auto complete fields
         ET_Posicion.setAdapter(adapter);
         // specify the minimum type of characters before drop-down list is shown
@@ -58,7 +55,7 @@ public class AltaJugador extends ActionBarActivity {
 //Cargamos los equipos de la liga en el spinner, más adelante, se cogerá el id del equipo seleccionado cuando se vaya a guardar un equipo en la base de datos.
         String[]equipos = cargarEquipos();
         spinner = (Spinner) findViewById(R.id.spinnerEquipos);
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, equipos); //selected item will look like a spinner set from XML
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, equipos); //selected item will look like a spinner set from XML
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(spinnerArrayAdapter);
 
@@ -84,6 +81,7 @@ public class AltaJugador extends ActionBarActivity {
                 } while (c.moveToNext());
 
             }
+            c.close();
         }
         return arreglo;
     }
@@ -91,7 +89,7 @@ public class AltaJugador extends ActionBarActivity {
     public void guardarDatos(View view){
 
         if(!campoVacio()) {
-            String mensaje = "";
+            String mensaje;
             Float peso = null, estatura = null;
             int dorsal = 0, id_equipo = 0;
             //Dentro del try/catch pasaremos los string a int y a float de los campos peso, estatura, dorsal e id_equipo.
@@ -166,12 +164,12 @@ public class AltaJugador extends ActionBarActivity {
         SQLiteDatabase db = baseHelper.getReadableDatabase();
         if (db != null) {
             Cursor c = db.rawQuery("SELECT Nombre_completo FROM Jugadores WHERE Nombre_completo='"+nombreCompleto+"'", null);
-            int cantidad = c.getCount();//Cantidad de registros
             if (c.moveToFirst()) {
                 do {
                     dato = c.getString(0);
                 } while (c.moveToNext());
             }
+            c.close();
         }
         if(dato.equals(nombreCompleto)){
             encontrado = true;

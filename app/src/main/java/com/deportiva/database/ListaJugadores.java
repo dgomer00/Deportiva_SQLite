@@ -86,7 +86,7 @@ public class ListaJugadores extends ActionBarActivity {
 
                 }while(c.moveToNext());
             }
-
+            c.close();
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arreglo);
             ListView lista = (ListView)findViewById(R.id.ListaJugadores);
             lista.setAdapter(adapter);
@@ -99,13 +99,12 @@ public class ListaJugadores extends ActionBarActivity {
         SQLiteDatabase db = baseHelper.getReadableDatabase();
         if (db != null) {
             Cursor c = db.rawQuery("SELECT Nombre FROM Equipos where Id="+Id, null);
-            int cantidad = c.getCount();//Cantidad de registros
-            int i = 0;
             if (c.moveToFirst()) {
                 do {
                     linea = c.getString(0);
                 } while (c.moveToNext());
             }
+            c.close();
         }
         return linea;
     }
