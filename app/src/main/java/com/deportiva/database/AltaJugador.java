@@ -1,6 +1,7 @@
 package com.deportiva.database;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
@@ -72,7 +73,6 @@ public class AltaJugador extends ActionBarActivity {
         return arreglo;
     }
 
-
     public void guardarDatos(View view){
 
         if(!campoVacio()) {
@@ -113,32 +113,56 @@ public class AltaJugador extends ActionBarActivity {
 
             String procedencia = ET_Procedencia.getText().toString();
 
+            if (!jugadorEncontrado(nombreCompleto)) {
+                BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+                SQLiteDatabase db = baseHelper.getWritableDatabase();
+                if (db != null) {
+                    ContentValues registroNuevo = new ContentValues();
+                    registroNuevo.put("Nombre", nombre);
+                    registroNuevo.put("Nombre_completo", nombreCompleto);
+                    registroNuevo.put("Posicion", posicion);
+                    registroNuevo.put("Fecha_nacimiento", fechaNacimiento);
+                    registroNuevo.put("Nacido", lugarNacimiento);
+                    registroNuevo.put("Peso", peso);
+                    registroNuevo.put("Estatura", estatura);
+                    registroNuevo.put("Procedencia", procedencia);
+                    registroNuevo.put("Dorsal", dorsal);
+                    registroNuevo.put("Id_equipo", id_equipo);//Este dato se coge de la opcion seleccionada en el spinner.
+                    long i = db.insert("Jugadores", null, registroNuevo);
+                    if (i > 0) {
+                        Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "Error, comprueba los campos", Toast.LENGTH_SHORT).show();
+                    }
 
-            BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
-            SQLiteDatabase db = baseHelper.getWritableDatabase();
-            if (db != null) {
-                ContentValues registroNuevo = new ContentValues();
-                registroNuevo.put("Nombre", nombre);
-                registroNuevo.put("Nombre_completo", nombreCompleto);
-                registroNuevo.put("Posicion", posicion);
-                registroNuevo.put("Fecha_nacimiento", fechaNacimiento);
-                registroNuevo.put("Nacido", lugarNacimiento);
-                registroNuevo.put("Peso", peso);
-                registroNuevo.put("Estatura", estatura);
-                registroNuevo.put("Procedencia", procedencia);
-                registroNuevo.put("Dorsal", dorsal);
-                registroNuevo.put("Id_equipo", id_equipo);//Este dato se coge de la opcion seleccionada en el spinner.
-                long i = db.insert("Jugadores", null, registroNuevo);
-                if (i > 0) {
-                    Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(this, "Error, comprueba los campos", Toast.LENGTH_SHORT).show();
                 }
-
+            }else{
+                Toast.makeText(this, "Jugador ya dado de alta. Introduzca otro", Toast.LENGTH_SHORT).show();
             }
         }else{
             Toast.makeText(this, "Compruebe los datos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public boolean jugadorEncontrado(String nombreCompleto){
+        boolean encontrado = false;
+        String dato="";
+        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+        SQLiteDatabase db = baseHelper.getReadableDatabase();
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT Nombre_completo FROM Jugadores WHERE Nombre_completo='"+nombreCompleto+"'", null);
+            int cantidad = c.getCount();//Cantidad de registros
+            if (c.moveToFirst()) {
+                do {
+                    dato = c.getString(0);
+                } while (c.moveToNext());
+            }
+        }
+        if(dato.equals(nombreCompleto)){
+            encontrado = true;
+            return encontrado;
+        }
+        return encontrado;
     }
 
     public boolean campoVacio(){
@@ -169,7 +193,9 @@ public class AltaJugador extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.listadoJugadores) {
+            Intent inten = new Intent(AltaJugador.this,ListaJugadores.class);
+            startActivity(inten);
             return true;
         }
 

@@ -398,4 +398,6 @@ Luchad, blanquiazules, por honrar nuestra región!\n
     <string name="hint_estatura">Estatura</string>
     <string name="hint_procedencia">Equipo procedencia</string>
     <string name="hint_dorsal">Dorsal</string>
+    <string name="lista_equipos">Lista Equipos</string>
+    <string name="lista_jugadores">Lista Jugadores</string>
 </resources>

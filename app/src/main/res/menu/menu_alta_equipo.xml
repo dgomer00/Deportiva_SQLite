@@ -2,6 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.deportiva.database.AltaEquipo">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+    <item android:id="@+id/listaEquipos" android:title="@string/lista_equipos"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>

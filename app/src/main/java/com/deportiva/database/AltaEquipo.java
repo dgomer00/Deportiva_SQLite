@@ -1,6 +1,8 @@
 package com.deportiva.database;
 
 import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -29,17 +31,21 @@ public class AltaEquipo extends ActionBarActivity {
             //Hacerlo dentro de try catch en el caso de leer un string y pasarlo a integer
             String Nombre = ET_Nombre.getText().toString();
 
+            //Hay que comprobar si ese equipo esta en la base de datos para no meterlo otra vez, para ello
+            if (!equipoEncontrado(Nombre)) {
+                BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+                SQLiteDatabase db = baseHelper.getWritableDatabase();
+                if (db != null) {
+                    ContentValues registroNuevo = new ContentValues();
+                    registroNuevo.put("Nombre", Nombre);
+                    long i = db.insert("Equipos", null, registroNuevo);
+                    if (i > 0) {
+                        Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
+                    }
 
-            BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
-            SQLiteDatabase db = baseHelper.getWritableDatabase();
-            if (db != null) {
-                ContentValues registroNuevo = new ContentValues();
-                registroNuevo.put("Nombre", Nombre);
-                long i = db.insert("Equipos", null, registroNuevo);
-                if (i > 0) {
-                    Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
                 }
-
+            } else {
+                Toast.makeText(this, "Equipo ya dado de alta. Introduzca otro", Toast.LENGTH_SHORT).show();
             }
         }else{
             Toast.makeText(this, "Rellene el dato", Toast.LENGTH_SHORT).show();
@@ -54,6 +60,28 @@ public class AltaEquipo extends ActionBarActivity {
         }
         return vacio;
     }
+
+    public boolean equipoEncontrado(String Nombre) {
+        boolean encontrado = false;
+        String dato="";
+        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+        SQLiteDatabase db = baseHelper.getReadableDatabase();
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT Nombre FROM Equipos WHERE Nombre='"+Nombre+"'", null);
+            int cantidad = c.getCount();//Cantidad de registros
+            if (c.moveToFirst()) {
+                do {
+                    dato = c.getString(0);
+                } while (c.moveToNext());
+            }
+        }
+        if(dato.equals(Nombre)){
+            encontrado = true;
+            return encontrado;
+        }
+        return encontrado;
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,7 +98,9 @@ public class AltaEquipo extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.listaEquipos) {
+            Intent inten = new Intent(AltaEquipo.this,ListaEquipo.class);
+            startActivity(inten);
             return true;
         }
 
