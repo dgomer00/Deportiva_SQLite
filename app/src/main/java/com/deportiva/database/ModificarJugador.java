@@ -32,8 +32,8 @@ public class ModificarJugador extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modificar_jugador);
-        ET_Nombre = (EditText)findViewById(R.id.editTextNombreJugador);
-        ET_NombreDeportivo = (EditText)findViewById(R.id.editTextNombreCompletoJugador);
+        ET_NombreDeportivo = (EditText)findViewById(R.id.editTextNombreJugador);
+        ET_Nombre  = (EditText)findViewById(R.id.editTextNombreCompletoJugador);
         ET_Posicion = (AutoCompleteTextView)findViewById(R.id.autoCompletePosicionJugador);
         ET_FechaNacimiento = (EditText)findViewById(R.id.editTextFechaJugador);
         ET_LugarNacimiento = (EditText)findViewById(R.id.editTextLugarNacimientoJugador);
@@ -73,16 +73,15 @@ public class ModificarJugador extends ActionBarActivity {
         //seleccionamos la posicion que nos devuelve el metodo, con el equipo que estabamos buscando.
         spinner.setSelection(getIndex(spinner, equipoEncontrado));
 
-
     }
 
     //Con este método devolvemos la posicion donde se encuentra el equipo selelcionado, para despues mostrarlo en el spinner.
-    private int getIndex(Spinner spinner, String myString){
+    private int getIndex(Spinner spinner, String equipo){
 
         int index = 0;
 
         for (int i=0;i<spinner.getCount();i++){
-            if (spinner.getItemAtPosition(i).equals(myString)){
+            if (spinner.getItemAtPosition(i).equals(equipo)){
                 index = i;
             }
         }
@@ -128,7 +127,6 @@ public class ModificarJugador extends ActionBarActivity {
                     i++;
 
                 } while (c.moveToNext());
-
             }
         }
         return arreglo;
@@ -207,7 +205,6 @@ public class ModificarJugador extends ActionBarActivity {
                     Toast.makeText(this, "Registro Modificado", Toast.LENGTH_SHORT).show();
                     super.onBackPressed();
                 }
-
             }
         }else{
             Toast.makeText(this, "Compruebe los datos", Toast.LENGTH_SHORT).show();
@@ -220,7 +217,6 @@ public class ModificarJugador extends ActionBarActivity {
                 ET_Dorsal.getText().toString().isEmpty() || ET_FechaNacimiento.getText().toString().isEmpty() || ET_Estatura.getText().toString().isEmpty() || ET_Posicion.getText().toString().isEmpty()
                 || ET_Procedencia.getText().toString().isEmpty()){
             vacio = true;
-            return vacio;
         }
         return vacio;
     }
@@ -233,8 +229,8 @@ public class ModificarJugador extends ActionBarActivity {
             try {
                 if(c.moveToFirst()){
                     Id = c.getInt(0);
-                    ET_Nombre.setText(c.getString(1));
-                    ET_NombreDeportivo.setText(c.getString(2));
+                    ET_NombreDeportivo.setText(c.getString(1));
+                    ET_Nombre.setText(c.getString(2));
                     ET_Posicion.setText(c.getString(3));
                     ET_FechaNacimiento.setText(c.getString(4));
                     ET_LugarNacimiento.setText(c.getString(5));

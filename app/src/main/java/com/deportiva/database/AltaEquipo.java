@@ -48,7 +48,7 @@ public class AltaEquipo extends ActionBarActivity {
                 Toast.makeText(this, "Equipo ya dado de alta. Introduzca otro", Toast.LENGTH_SHORT).show();
             }
         }else{
-            Toast.makeText(this, "Rellene el dato", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Introduce un equipo", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -56,7 +56,6 @@ public class AltaEquipo extends ActionBarActivity {
         boolean vacio =false;
         if(ET_Nombre.getText().toString().isEmpty()){
             vacio=true;
-            return vacio;
         }
         return vacio;
     }
@@ -77,7 +76,6 @@ public class AltaEquipo extends ActionBarActivity {
         }
         if(dato.equals(Nombre)){
             encontrado = true;
-            return encontrado;
         }
         return encontrado;
     }

@@ -31,20 +31,26 @@ public class ModificarEquipo extends ActionBarActivity {
     }
 
     public void modificarDatos(View view){
-        String Nombre = ET_Nombre.getText().toString();
+        if(!campoVacio()) {
+            String Nombre = ET_Nombre.getText().toString();
+            if (!equipoEncontrado(Nombre)) {
+                BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+                SQLiteDatabase db = baseHelper.getWritableDatabase();
+                if (db != null) {
+                    ContentValues modificaRegistro = new ContentValues();
+                    modificaRegistro.put("Nombre", Nombre);
+                    long i = db.update("Equipos", modificaRegistro, "Id=" + Id, null);
+                    if (i > 0) {
+                        Toast.makeText(this, "Registro Modificado", Toast.LENGTH_SHORT).show();
+                        super.onBackPressed();
+                    }
 
-
-        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this,"BaseDatosDeportiva",null,1);
-        SQLiteDatabase db = baseHelper.getWritableDatabase();
-        if(db!=null){
-            ContentValues modificaRegistro = new ContentValues();
-            modificaRegistro.put("Nombre",Nombre);
-            long i = db.update("Equipos",modificaRegistro,"Id="+Id,null);
-            if(i>0){
-                Toast.makeText(this, "Registro Modificado", Toast.LENGTH_SHORT).show();
-                super.onBackPressed();
+                }
+            } else {
+                Toast.makeText(this, "Equipo ya dado de alta. Introduzca otro", Toast.LENGTH_SHORT).show();
             }
-
+        }else{
+            Toast.makeText(this, "Introduce un equipo", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -62,6 +68,34 @@ public class ModificarEquipo extends ActionBarActivity {
                 c.close();
             }
         }
+    }
+
+    public boolean campoVacio(){
+        boolean vacio =false;
+        if(ET_Nombre.getText().toString().isEmpty()){
+            vacio=true;
+        }
+        return vacio;
+    }
+
+    public boolean equipoEncontrado(String Nombre) {
+        boolean encontrado = false;
+        String dato="";
+        BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(this, "BaseDatosDeportiva", null, 1);
+        SQLiteDatabase db = baseHelper.getReadableDatabase();
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT Nombre FROM Equipos WHERE Nombre='"+Nombre+"'", null);
+            int cantidad = c.getCount();//Cantidad de registros
+            if (c.moveToFirst()) {
+                do {
+                    dato = c.getString(0);
+                } while (c.moveToNext());
+            }
+        }
+        if(dato.equals(Nombre)){
+            encontrado = true;
+        }
+        return encontrado;
     }
 
     @Override

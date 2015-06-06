@@ -51,7 +51,6 @@ public class SignIn extends ActionBarActivity {
         ET_Password = (EditText)findViewById(R.id.editText_password);
         if (ET_User.getText().toString().isEmpty() && ET_Password.getText().toString().isEmpty()){
             vacio=true;
-            return vacio;
         }
             return vacio;
 

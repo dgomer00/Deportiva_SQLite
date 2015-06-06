@@ -175,7 +175,6 @@ public class AltaJugador extends ActionBarActivity {
         }
         if(dato.equals(nombreCompleto)){
             encontrado = true;
-            return encontrado;
         }
         return encontrado;
     }
@@ -186,7 +185,6 @@ public class AltaJugador extends ActionBarActivity {
                 ET_Dorsal.getText().toString().isEmpty() || ET_FechaNacimiento.getText().toString().isEmpty() || ET_Estatura.getText().toString().isEmpty() || ET_Posicion.getText().toString().isEmpty()
                  || ET_Procedencia.getText().toString().isEmpty()){
             vacio = true;
-            return vacio;
         }
         return vacio;
     }
