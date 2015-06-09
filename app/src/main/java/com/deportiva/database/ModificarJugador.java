@@ -183,6 +183,11 @@ public class ModificarJugador extends ActionBarActivity {
             String nombre = ET_NombreDeportivo.getText().toString();
             String nombreCompleto = ET_Nombre.getText().toString();
             String posicion = ET_Posicion.getText().toString();
+            if(!posicionValida(posicion)){
+                Toast.makeText(this, "Posicion incorrecta", Toast.LENGTH_SHORT).show();
+                //Si la posición no es una posición correcta se mostrara el siguiente mensaje y no se guardara el jugador, hasta que sea correcta.
+                return;
+            }
             String lugarNacimiento = ET_LugarNacimiento.getText().toString();
             String procedencia = ET_Procedencia.getText().toString();
 
@@ -209,6 +214,14 @@ public class ModificarJugador extends ActionBarActivity {
         }else{
             Toast.makeText(this, "Compruebe los datos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public boolean posicionValida(String posicion){
+        boolean valida = false;
+        if (posicion.equals("Portero")|| posicion.equals("Defensa") || posicion.equals("Centrocampista") || posicion.equals("Delantero")){
+            valida = true;
+        }
+        return valida;
     }
 
     public boolean campoVacio(){
