@@ -14,6 +14,8 @@ import com.example.deportiva.main.R;
 
 public class SignIn extends ActionBarActivity {
 
+    EditText ET_User, ET_Password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,21 +25,36 @@ public class SignIn extends ActionBarActivity {
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = ((EditText)findViewById(R.id.editText_user)).getText().toString();
-                String password = ((EditText)findViewById(R.id.editText_password)).getText().toString();
+                //Comprobamos si los dos campos están vacios y avisaremos con un mensaje. En cualquier otro caso,por ejemplo un solo campo vacío o datos incorrectos mostraremos otro mensaje.
+                if (!estanVacios()) {
+                    String user = ((EditText) findViewById(R.id.editText_user)).getText().toString();
+                    String password = ((EditText) findViewById(R.id.editText_password)).getText().toString();
 
-                BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(getApplicationContext(),"BaseDatosDeportiva",null,1);
-                if(baseHelper.testCredentials(baseHelper,user,password)){
-                    Intent intent;
-                    intent = new Intent(SignIn.this,PantallaSeleccion.class);
-                    startActivity(intent);
+                    BaseDatosOpenHelper baseHelper = new BaseDatosOpenHelper(getApplicationContext(), "BaseDatosDeportiva", null, 1);
+                    if (baseHelper.testCredentials(baseHelper, user, password)) {
+                        Intent intent;
+                        intent = new Intent(SignIn.this, PantallaSeleccion.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getBaseContext(), "Usuario no registrado", Toast.LENGTH_LONG).show();
+                    }
                 }else{
-                    Toast.makeText(getBaseContext(), "Usuario no registrado", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Rellene los datos", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
+    public boolean estanVacios(){
+        boolean vacio=false;
+        ET_User = (EditText)findViewById(R.id.editText_user);
+        ET_Password = (EditText)findViewById(R.id.editText_password);
+        if (ET_User.getText().toString().isEmpty() && ET_Password.getText().toString().isEmpty()){
+            vacio=true;
+        }
+            return vacio;
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.deportiva.database.ModificarEquipo">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="@string/hint_nombre_equipo"
+        android:ems="10"
+        android:id="@+id/editTextModificarEquipo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_guardar_equipo"
+        android:id="@+id/boton_modificar_equipo"
+        android:onClick="modificarDatos"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

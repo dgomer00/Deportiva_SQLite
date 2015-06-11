@@ -10,9 +10,9 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
 
     <application
@@ -213,6 +213,30 @@
         <activity
             android:name="com.deportiva.database.PantallaSeleccion"
             android:label="@string/title_activity_pantalla_seleccion" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.AltaEquipo"
+            android:label="@string/title_activity_alta_equipo" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ModificarEquipo"
+            android:label="@string/title_activity_modificar_equipo" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ListaEquipo"
+            android:label="@string/title_activity_lista_equipo" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.AltaJugador"
+            android:label="@string/title_activity_alta_jugador" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ModificarJugador"
+            android:label="@string/title_activity_modificar_jugador" >
+        </activity>
+        <activity
+            android:name="com.deportiva.database.ListaJugadores"
+            android:label="@string/title_activity_lista_jugadores" >
         </activity>
     </application>
 
