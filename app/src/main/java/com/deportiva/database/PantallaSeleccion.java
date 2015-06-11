@@ -1,9 +1,11 @@
 package com.deportiva.database;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import com.example.deportiva.main.R;
@@ -20,6 +22,37 @@ public class PantallaSeleccion extends ActionBarActivity {
         Button botonModificarEquipo = (Button)findViewById(R.id.button_modificar_equipos);
         Button botonAltaEquipo = (Button)findViewById(R.id.button_alta_equipo);
 
+        botonAltaJugador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PantallaSeleccion.this, AltaJugador.class);
+                startActivity(intent);
+            }
+        });
+
+        botonModificarEquipo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PantallaSeleccion.this,ListaEquipo.class);
+                startActivity(intent);
+            }
+        });
+        botonAltaEquipo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inten = new Intent(PantallaSeleccion.this,AltaEquipo.class);
+                startActivity(inten);
+            }
+        });
+
+        botonModificarJugador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inten = new Intent(PantallaSeleccion.this,ListaJugadores.class);
+                startActivity(inten);
+
+            }
+        });
 
     }
 
