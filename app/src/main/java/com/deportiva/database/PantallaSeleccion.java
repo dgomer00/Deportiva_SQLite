@@ -22,6 +22,8 @@ public class PantallaSeleccion extends ActionBarActivity {
         Button botonModificarEquipo = (Button)findViewById(R.id.button_modificar_equipos);
         Button botonAltaEquipo = (Button)findViewById(R.id.button_alta_equipo);
 
+        //A continuación están los Listener de los 4 botones.
+
         botonAltaJugador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

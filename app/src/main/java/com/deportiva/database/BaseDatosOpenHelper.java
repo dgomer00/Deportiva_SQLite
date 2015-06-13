@@ -99,6 +99,7 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
         db.execSQL(tablaJugadores);
     }
 
+       //Este método es utilizado para la comprobacion de usuario y contraseña para entrar a esta parte de la app, para poder modificar la base de datos.
     public boolean testCredentials(BaseDatosOpenHelper baseHelper,String user, String password){
         SQLiteDatabase db = baseHelper.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT count(*)FROM Usuarios WHERE User='"+user+"' AND Password = '"+password+"'",null);
@@ -117,6 +118,7 @@ public class BaseDatosOpenHelper extends SQLiteOpenHelper {
         return true;
     }
 
+    //Este método se utiliza para la carga de los jugadores en la opcion de plantilla.
     public static String[] cargar(BaseDatosOpenHelper baseHelper, String nombre, int dorsal, int id_equipo){
 
         String[] jugador = new String[9];
